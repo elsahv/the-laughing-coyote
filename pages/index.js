@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Intro from '../components/Intro';
 import About from '../components/About';
@@ -163,7 +164,6 @@ export default function Home({ posts }) {
                                         className="website-screenshot"
                                         src={urlFor(post.websiteImg)}
                                         alt=""
-                                        layout="relative"
                                         />
                                         </ImageScreenshot>
                             </WebsiteWrapper>
