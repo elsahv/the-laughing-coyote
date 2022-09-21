@@ -6,9 +6,8 @@ import { sanityClient, urlFor } from "../client"
 import styled from 'styled-components'
 import Contact from '../components/Contact';
 
-
+//STYLES
 export const Wrapper = styled.div`
-// background: aquamarine;
 padding: 55px;
 display: grid;
 grid-template-columns: 1fr;
@@ -99,7 +98,6 @@ font-size: 18px;
 
 export const ImageScreenshot = styled.div`
  position: relative;
-
 .website-screenshot {
  width: 1250px;
  height: 700px;
@@ -134,6 +132,8 @@ export const ImageScreenshot = styled.div`
   }
 }
 `
+//END STYLES
+
 
 export default function Home({ posts }) {
   return (

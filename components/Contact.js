@@ -13,6 +13,10 @@ import {
  font-weight: bold;
  margin-left: 50px;
  margin-top: 50px;
+ 
+ @media only screen and (max-width: 810px) {
+ 
+}
  `
   
  
@@ -34,9 +38,15 @@ import {
     transition: 1s;
    }
  
- @media only screen and (max-width: 810px) {
+ @media only screen and (max-width: 768px) {
   a {
-    font-size: 22px;
+    font-size: 30px;
+  } 
+}
+
+@media only screen and (max-width: 768px) {
+  a {
+    font-size: 20px;
   } 
 }
 
@@ -93,7 +103,6 @@ const Contact = () => {
     <CTA>
         <a href="mailto:devdesignsbyelsa@gmail.com">
            devdesignsbyelsa@gmail.com</a>
-     
    
 
       <SmIcons>

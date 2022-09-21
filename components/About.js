@@ -8,8 +8,8 @@ import PortfolioPic from '../public/images/portfolio-pic.jpg'
 export const Wrapper = styled.div`
 display: flex;
 justify-content: center;
-margin: 10px 15px;
-padding: 0 35px;
+margin: 10px 25px;
+padding: 20px  35px;
 `
 
 export const Grid = styled.div`
@@ -37,7 +37,8 @@ grid-area: a;
 border: solid 2px black;
 
 @media only screen and (max-width: 834px) {
-  padding-left: 40px;
+  margin-left: 25px;
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 531px) {
@@ -71,6 +72,7 @@ h4 {
 @media only screen and (max-width: 1024px) {
   padding-top: 0;
   padding-left: 25px;
+  padding-top: 25px;
   p {
     font-size: 18px;      
   }
