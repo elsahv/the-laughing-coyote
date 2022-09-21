@@ -21,6 +21,8 @@ import {
  justify-content: center;
  flex-direction: column;
  padding-top: 20px;
+ padding-right: 35px;
+
  a {
    font-size: 35px;
    margin: 20px 10px;
@@ -91,7 +93,6 @@ const Contact = () => {
     <CTA>
         <a href="mailto:devdesignsbyelsa@gmail.com">
            devdesignsbyelsa@gmail.com</a>
-        </CTA>
      
    
 
@@ -107,6 +108,8 @@ const Contact = () => {
             <FaInstagram /> Instagram
             </a>
             </SmIcons>
+        </CTA>
+
             </ContentWrapper>
     </>
   )
