@@ -22,7 +22,8 @@ padding-bottom: 15px;
 
 li {
   font-size: 20px;
-  list-style: none;
+  list-style-type: "- ";
+  padding: 3px 0;
 }
 
 @media only screen and (max-width: 768px) {
