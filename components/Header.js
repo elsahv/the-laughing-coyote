@@ -34,13 +34,10 @@ display: flex;
 
 `
  
-export const SubscribeWrapper = styled.div`
-`
 
 
 export const Menu = styled.div`
 height: 100%;
-// opacity: 0.8; 
 display: flex;  
 flex-direction: column;
 justify-content: space-between;
@@ -60,7 +57,6 @@ padding-top: 50px;
 
 export const Logo = styled.h1`
 font-size: 65px;
-// margin: 10px 0;
  a{
   color: #fff;
    text-decoration: none;
@@ -80,7 +76,6 @@ text-transform: capitalize;
 text-decoration: none;  
 padding-top: 5px;
 padding-left: 5px;
-// margin: 5px 0;
   a {
   margin: 1px 0;
   text-decoration: none;  
