@@ -1,14 +1,11 @@
-import Link from 'next/link'
 import styled from 'styled-components'
 
 
 //STYLES
-
 export const Quote = styled.div`
 background: teal;
 grid-area: b;
 text-align: left;
-// font-size: 20px;
 padding: 35px;
 margin-top: 45px;
 margin-left: 50px;

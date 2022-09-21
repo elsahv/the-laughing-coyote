@@ -45,12 +45,8 @@ font-weight: bold;
 padding-right: 25px;
 padding-top: 20px;
 text-decoration: underline;
-font-size: 30px;
+font-size: 35px;
 text-align: right;
-
-@media only screen and (max-width: 531px) {
-// padding: 5px;
-}
 `
   
   

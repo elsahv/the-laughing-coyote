@@ -77,11 +77,9 @@ flex-direction: column;
 
 
 export const WebsiteTitle = styled.h3`
-// opacity: 0.8;
 font-size: 25px;
 padding: 35px 0 5px 0px;
 &:hover {
-  // color: teal;
   transition: 1s;
 }
 
@@ -93,7 +91,6 @@ padding: 35px 0 5px 0px;
 export const WebsiteDescription = styled.span`
 padding-left: 5px;
 padding-bottom: 5px;
-
 margin-bottom: 15px;
 font-size: 18px;
   `
@@ -149,7 +146,7 @@ export default function Home({ posts }) {
 
         <Intro />
       <Services />
-      <PortfolioTitle id="featuredWebsites">Featured Projects</PortfolioTitle>   
+      <PortfolioTitle id="featuredWebsites">Featured Websites</PortfolioTitle>   
         <Wrapper>
                           {posts &&
                           posts.map((post, index) => (   

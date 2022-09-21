@@ -1,10 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import SubscribeIndex from './SubscribeIndex'
 import JtPic from '../public/images/joshuatreeabout.jpg'
-import { FaGithub,
-    FaInstagram,
-    FaLinkedin } from "react-icons/fa";
 import styled from 'styled-components'
 
 
@@ -122,23 +118,18 @@ const Header = () => {
   return (
     <>
     <NavSection>  
-      {/* <SubscribeWrapper>
-  <SubscribeIndex />
-  </SubscribeWrapper> */}
 <Menu>
 
   <MenuItems>
  <Logo> 
  <Link href="/">
   Elsa Hovey
-  {/* - Development/ Design  */}
    </Link>
    </Logo> 
  
    <NavLinks>
    <Link href="/#services">Services</Link>
-   <Link href="/#featuredWebsites">Featured Projects</Link>
-       {/* <Link href="/#about">About</Link> */}
+   <Link href="/#featuredWebsites">Featured Websites</Link>
        <Link href="/#contact">Contact</Link>
  
            {/* <SmIcons> 

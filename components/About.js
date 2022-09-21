@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 display: flex;
 justify-content: center;
 margin: 10px 15px;
+padding: 0 35px;
 `
 
 export const Grid = styled.div`
@@ -33,7 +34,7 @@ export const ImageWrapper = styled.div`
 position: relative;
 width: 300px;     
 grid-area: a;
-padding-left: 40px;
+border: solid 2px black;
 
 @media only screen and (max-width: 834px) {
   padding-left: 40px;
@@ -56,6 +57,7 @@ line-height: 1.5em;
 h4 {
    font-size: 30px;
    padding: 20px 0;
+   text-decoration: underline;
 }
  a {
    color: #000;

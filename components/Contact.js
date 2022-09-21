@@ -38,8 +38,6 @@ import {
   } 
 }
 
- @media only screen and (max-width: 531px) {
-}
  `
 
  export const Title = styled.h2`  
