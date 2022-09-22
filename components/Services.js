@@ -22,7 +22,7 @@ padding-bottom: 15px;
 
 li {
   font-size: 20px;
-  list-style-type: "- ";
+  list-style-type: none;
   padding: 3px 0;
 }
 
