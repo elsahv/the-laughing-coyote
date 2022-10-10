@@ -1,142 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head'
-import Intro from '../components/Intro';
-import About from '../components/About';
-import Services from '../components/Services';
-import { sanityClient, urlFor } from "../client"
-import styled from 'styled-components'
-import Contact from '../components/Contact';
+import Head from "next/head";
+import Image from "next/image";
+import Intro from "../components/Intro";
+import Services from "../components/Services";
+import { sanityClient, urlFor } from "../client";
+import styled from "styled-components";
+import Contact from "../components/Contact";
 
 //STYLES
-export const Wrapper = styled.div`
-padding: 55px;
-display: grid;
-grid-template-columns: 1fr;
-grid-gap: 2em;
-a {
-  color: #000;
-  text-decoration: none;
-}
+const Wrapper = styled.div``;
 
-@media only screen and (max-width: 834px) {
-  grid-template-columns: 1fr;
-  padding: auto;
-}
-
-@media only screen and (max-width: 600px) {
-  padding: 20px;
-}
-`
-
-export const PortfolioTitle = styled.h2`
-text-align: left;
-margin-right: 60px;
-padding-right: 55px;
-padding-left: 65px;
-padding-top: 40px;
-padding-bottom: 20px;
-font-size: 40px;
-background: aquamarine;
-
-
-@media only screen and (max-width: 600px) {
- font-size: 25px;
- padding: 30px;
- margin-right: 20px;
-  }
-`
-
-
-
-export const WebsiteWrapper = styled.div`
-cursor: pointer;
-&:hover {
+const Grid = styled.div`
+  margin-top: 40px;
+  margin-left: 60px;
+  display: grid;
+  grid-template-column: 1fr 1fr;
+  grid-template-areas: "ls rs";
+  background: teal;
+  padding-bottom: 45px;
+  padding-left: 20px;
   opacity: 0.8;
-  transition: 1s;
-}
-a {
-  color: #000;
-}
+`;
 
-@media only screen and (max-width: 834px) {
-margin-right: 25px;
-}
-
-@media only screen and (max-width: 600px) {
-  margin-right: 15px;
-  }
-`
-
-
-
-export const Content = styled.div`
-display: flex;
-align-items: flex-start;
-flex-direction: column;
-`
-
-
-export const WebsiteTitle = styled.h3`
-font-size: 25px;
-padding: 35px 0 5px 0px;
-&:hover {
-  transition: 1s;
-}
-
-@media only screen and (max-width: 531px) {
-  font-size: 18px;
-  }
-`
-
-export const WebsiteDescription = styled.span`
-padding-left: 5px;
-padding-bottom: 5px;
-margin-bottom: 15px;
-font-size: 18px;
-  `
-
-
-
-export const ImageScreenshot = styled.div`
- position: relative;
-.website-screenshot {
- width: 1250px;
- height: 700px;
- border: solid 2px black;
-}
-
-@media only screen and (max-width: 1024px) {
-  .website-screenshot {
-    width: 900px;
-    height: 660px;
+export const Quote = styled.div`
+  grid-area: rs;
+  margin-top: 45px;
+  margin-left: 20px;
+  h4 {
+    font-size: 35px;
+    color: #000;
   }
 
-
-  @media only screen and (max-width: 834px) {
-    .website-screenshot {
-      width: 700px;
-      height: 460px;
-     }
+  p {
+    font-size: 27px;
+    color: #000;
   }
 
-@media only screen and (max-width: 600px) {
-  .website-screenshot {
-    width: 500px;
-    height: 350px;
+  a {
+    color: #000;
+    text-decoration: underline;
+    margin: 5px;
   }
-}
+  a:hover {
+    color: aquamarine;
+    transition: 2s;
+  }
 
-@media only screen and (max-width: 531px) {
-  .website-screenshot {
-    width: 350px;
-    height: 250px;
+  @media only screen and (max-width: 1024px) {
+    h4 {
+      font-size: 27px;
+      padding-top: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
   }
-}
-`
+`;
+
 //END STYLES
 
-
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -145,53 +68,19 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Intro />
-      <Services />
-      <PortfolioTitle id="featuredWebsites">Featured Websites</PortfolioTitle>   
-        <Wrapper>
-                          {posts &&
-                          posts.map((post, index) => (   
-                            <span key={index}>
-                           <a target="_blank" href={post.projectLink} rel="noreferrer">
+      <Wrapper>
+        <Grid>
+          <Quote>
+            <h4>Hi there, Im Elsa.</h4>
+            <p>
+              Im a web developer based in Joshua Tree, CA. I create niche
+              websites and solutions for small business owners and creatives.{" "}
+            </p>
+          </Quote>
+        </Grid>
 
-                           <WebsiteWrapper>
-                             <Content>
-                                    <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
-                                    <WebsiteDescription>{post.description}</WebsiteDescription>
-                            </Content>
-                                       <ImageScreenshot>
-                                        <img
-                                        className="website-screenshot"
-                                        src={urlFor(post.websiteImg)}
-                                        alt=""
-                                        />
-                                        </ImageScreenshot>
-                            </WebsiteWrapper>
-                            </a>
-                              </span>   
-                            ))}
+        <Services />
       </Wrapper>
-      <Contact />
-      <About />
-
     </>
-  )
-}
-
-export const getServerSideProps = async() => {
-  const query = '*[_type == "websites"]'
-  const posts = await sanityClient.fetch(query)
-  if (!posts.length) {
-    return {
-      props: {
-        posts: [],
-      },
-    }
-  } else {
-    return {
-      props: {
-        posts,
-      },
-    }
-  }
+  );
 }

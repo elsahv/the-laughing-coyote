@@ -1,40 +1,32 @@
-import styled from 'styled-components'
-import GlobalStyles from './Global'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Footer from './Footer'
-
-
+import styled from "styled-components";
+import GlobalStyles from "./Global";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
+import Header from "./Header";
 
 const Wrapper = styled.div`
-padding-top: 10px;
-padding-bottom: 55px;
-margin-left: 480px;
-// background: aquamarine;
-
-@media only screen and (max-width: 1024px) {
-  margin-top: 20px;
-  margin-left: 0px;
-}
-
-@media only screen and (max-width: 600px) {
-  margin-left: 10px;
- }
-`
-
-
- 
+  margin-left: 450px;
+  // background: #3aa1aa;
+  overflow-y: scroll;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 700;
+  // border-left: solid 2px black;
+`;
 
 export default function Layout({ children }) {
   return (
     <>
-    <GlobalStyles />
-    <Header />
-    <Sidebar />
-    <Wrapper>
-      <main>{children}</main>
+      <GlobalStyles />
+      <Sidebar />
+      <Header />
+
+      <Wrapper>
+        <main>{children}</main>
       </Wrapper>
-      <Footer />
+
+      {/* <Footer /> */}
     </>
-  )
+  );
 }
