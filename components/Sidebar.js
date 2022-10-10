@@ -37,6 +37,7 @@ export const Logo = styled.div`
 
 export const NavLinks = styled.div`
   font-size: 20px;
+  padding-top: 10px;
   a {
     color: #000;
     text-decoration: none;
@@ -59,9 +60,9 @@ const Sidebar = () => {
         </Logo>
 
         <NavLinks>
-          <Link href="/#services">Services</Link>
+          <Link href="/">Services</Link>
           <Link href="/featured-websites">Featured Websites</Link>
-          <Link href="/#contact">Contact</Link>
+          <Link href="/#contact-mobile">Contact</Link>
         </NavLinks>
       </SidebarWrapper>
     </>

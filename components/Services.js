@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
-    line-height: 1;
+    // line-height: 1;
     padding: 10px;
     li {
       font-size: 17px;
@@ -34,7 +34,7 @@ export const Wrapper = styled.div`
 
   @media only screen and (max-width: 531px) {
     ul {
-      margin: 5px 10px;
+      margin: 0px 10px;
     }
   }
 `;
@@ -46,6 +46,13 @@ export const SkillsTitle = styled.h2`
   text-decoration: underline;
   font-size: 35px;
   text-align: right;
+
+  @media only screen and (max-width: 531px) {
+    font-size: 30px;
+    padding-bottom: 15px;
+    padding-top: 55px;
+    padding-right: 2px;
+  }
 `;
 
 const skills = () => {

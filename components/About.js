@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
-  background: #fff;
+  // background: maroon;
   display: flex;
   justify-content: center;
   padding: 70px 40px 20px 50px;
@@ -26,12 +26,12 @@ export const ImageWrapper = styled.div`
   margin-left: 20px;
 
   @media only screen and (max-width: 834px) {
-    margin-left: 25px;
     margin-top: 30px;
+    margin-left: 0;
   }
 
-  @media only screen and (max-width: 531px) {
-    padding: 0;
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -63,6 +63,12 @@ export const Paragraph = styled.div`
     padding-top: 25px;
     p {
       font-size: 18px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+    h4 {
+      text-align: center;
     }
   }
 `;

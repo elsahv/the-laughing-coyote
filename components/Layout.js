@@ -9,8 +9,8 @@ const Wrapper = styled.div`
   // background: #3aa1aa;
   overflow-y: scroll;
   height: 100%;
-  position: absolute;
-  right: 0;
+  position: relative;
+  bottom: 0;
   z-index: 700;
   // border-left: solid 2px black;
 
@@ -30,7 +30,7 @@ export default function Layout({ children }) {
         <main>{children}</main>
       </Wrapper>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

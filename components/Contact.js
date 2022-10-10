@@ -6,8 +6,7 @@ export const ContentWrapper = styled.div`
   font-weight: bold;
   // background: maroon;
   text-align: right;
-  padding: 80px 10px 20px;
-  // border-top: solid 2px black;
+  padding: 80px 10px 200px;
 `;
 
 export const CTA = styled.div`
@@ -42,7 +41,7 @@ export const CTA = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 35wpx;
+  font-size: 30px;
   color: black;
   text-decoration: underline;
   padding: 0 10px;
