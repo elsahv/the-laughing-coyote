@@ -35,9 +35,9 @@ export const Grid = styled.div`
     text-decoration: none;
   }
 
-  @media only screen and (max-width: 834px) {
+  @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
-    padding: auto;
+    padding: 0 10px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -95,9 +95,12 @@ export const WebsiteDescription = styled.span`
 
 export const ImageScreenshot = styled.div`
   .website-screenshot {
-    // width: 550px;
-    // height: 350px;
     border: solid 2px black;
+    @media only screen and (max-width: 834px) {
+      height: 250px;
+    }
+  }
+
   }
 `;
 

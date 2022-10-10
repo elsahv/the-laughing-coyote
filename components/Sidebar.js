@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const SidebarWrapper = styled.div`
-  text-shadow: 1px 1px 1px teal;
+  // text-shadow: 1px 1px 1px teal;
   text-align: center;
   padding: 10px;
   display: none;
@@ -25,7 +25,7 @@ export const Logo = styled.div`
   font-weight: bold;
   padding: 10px;
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 30px;
   }
@@ -38,7 +38,7 @@ export const Logo = styled.div`
 export const NavLinks = styled.div`
   font-size: 20px;
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     margin: 0 15px;
   }
