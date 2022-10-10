@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
@@ -9,13 +10,13 @@ const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  padding-left: 120px;
-  padding-top: 95px;
-  padding-bottom: 15px;
+  padding-top: 65px;
+  padding-bottom: 35px;
   color: #000;
   // text-shadow: 1px 1px 1px #000;
-  font-size: 40px;
-  // text-decoration: underline;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;

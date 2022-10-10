@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import Services from "../components/Services";
 import { sanityClient, urlFor } from "../client";
@@ -76,7 +77,10 @@ export default function Home() {
         >
           <Grid>
             <Quote>
-              <h4>Hi there, Im Elsa.</h4>
+              <h4>
+                Hi there,
+                <Link href="/#about">Im Elsa.</Link>
+              </h4>
               <p>
                 Im a web developer based in Joshua Tree, CA. I create niche
                 websites and solutions for small business owners and creatives.{" "}

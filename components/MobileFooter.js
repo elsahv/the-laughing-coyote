@@ -8,6 +8,11 @@ const Wrapper = styled.div`
     display: block;
     position: relative;
     padding-top: 800px;
+    span {
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
   }
 `;
 
@@ -25,6 +30,7 @@ const ContactSection = styled.footer`
   @media only screen and (max-width: 600px) {
     display: block;
     background: teal;
+    border-bottom: solid 2px black;
   }
 `;
 
@@ -37,7 +43,7 @@ const mobileFooterSection = () => {
       <ContactSection id="contact-mobile">
         <Contact />
       </ContactSection>
-      Elsa Hovey- Copyright @2022
+      <span>Elsa Hovey- Copyright @2022</span>
     </Wrapper>
   );
 };
