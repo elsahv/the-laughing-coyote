@@ -118,7 +118,7 @@ const Header = () => {
             <NavLinks>
               <Link href="/#services">Services</Link>
               <Link href="/featured-websites">Featured Websites</Link>
-              {/* <Link href="/#about">About</Link> */}
+              <Link href="/#about">About</Link>
               <Link href="/#contact">Contact</Link>
             </NavLinks>
           </MenuItems>

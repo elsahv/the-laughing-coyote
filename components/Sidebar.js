@@ -62,6 +62,7 @@ const Sidebar = () => {
         <NavLinks>
           <Link href="/">Services</Link>
           <Link href="/featured-websites">Featured Websites</Link>
+          <Link href="/#about-mobile">About</Link>
           <Link href="/#contact-mobile">Contact</Link>
         </NavLinks>
       </SidebarWrapper>
