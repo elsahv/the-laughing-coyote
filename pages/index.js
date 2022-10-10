@@ -5,6 +5,7 @@ import Services from "../components/Services";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import Contact from "../components/Contact";
+import { motion } from "framer-motion";
 
 //STYLES
 const Wrapper = styled.div``;
@@ -68,17 +69,23 @@ export default function Home() {
       </Head>
 
       <Wrapper>
-        <Grid>
-          <Quote>
-            <h4>Hi there, Im Elsa.</h4>
-            <p>
-              Im a web developer based in Joshua Tree, CA. I create niche
-              websites and solutions for small business owners and creatives.{" "}
-            </p>
-          </Quote>
-        </Grid>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+          <Grid>
+            <Quote>
+              <h4>Hi there, Im Elsa.</h4>
+              <p>
+                Im a web developer based in Joshua Tree, CA. I create niche
+                websites and solutions for small business owners and creatives.{" "}
+              </p>
+            </Quote>
+          </Grid>
 
-        <Services />
+          <Services />
+        </motion.div>
       </Wrapper>
     </>
   );

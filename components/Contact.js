@@ -6,7 +6,12 @@ export const ContentWrapper = styled.div`
   font-weight: bold;
   // background: maroon;
   text-align: right;
-  padding: 80px 10px 200px;
+  padding: 40px 10px 600px;
+  border-top: solid 2px black;
+
+  @media only screen and (max-width: 600px) {
+    padding: 20px 15px;
+  }
 `;
 
 export const CTA = styled.div`

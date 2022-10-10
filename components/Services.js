@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (max-width: 531px) {
+  @media only screen and (max-width: 600px) {
     ul {
       margin: 0px 10px;
     }
@@ -47,7 +47,7 @@ export const SkillsTitle = styled.h2`
   font-size: 35px;
   text-align: right;
 
-  @media only screen and (max-width: 531px) {
+  @media only screen and (max-width: 600px) {
     font-size: 30px;
     padding-bottom: 15px;
     padding-top: 55px;

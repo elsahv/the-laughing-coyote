@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import About from "../components/About";
 import Contact from "../components/Contact";
 import styled from "styled-components";
 import JtPic from "../public/images/joshuatreeabout.jpg";
+// import { motion } from "framer-motion";
 
 export const NavSection = styled.nav`
   overflow-y: scroll;
@@ -15,7 +15,6 @@ export const NavSection = styled.nav`
   left: 0;
   border-right: solid 2px #000;
   background-color: #3aa1aa;
-
   z-index: 1000;
   text-decoration: none;
 
@@ -105,6 +104,11 @@ const Header = () => {
   return (
     <>
       <NavSection>
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        > */}
         <Menu>
           <MenuItems>
             <Logo>
@@ -131,6 +135,7 @@ const Header = () => {
           <About />
           <Contact />
         </Menu>
+        {/* </motion.div> */}
       </NavSection>
     </>
   );
