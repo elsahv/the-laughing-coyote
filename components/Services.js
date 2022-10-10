@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   }
 
   li {
-    font-size: 20px;
+    font-size: 24px;
     list-style-type: none;
     padding: 3px 0;
     // color: rgb(0, 123, 165);

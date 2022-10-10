@@ -87,7 +87,7 @@ export const AboutImgWrapper = styled.div`
   width: 670px;
   grid-area: ls;
   border-right: solid 2px black;
-  padding-top: 305px;
+  padding-top: 385px;
 `;
 
 const Header = () => {
