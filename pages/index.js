@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Image from "next/image";
-import Intro from "../components/Intro";
 import Services from "../components/Services";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";

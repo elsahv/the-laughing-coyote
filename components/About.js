@@ -4,11 +4,10 @@ import styled from "styled-components";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
-  // background: green;
+  background: #fff;
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  padding-bottom: 20px;
+  padding: 70px 40px 20px 50px;
 `;
 
 export const Grid = styled.div`

@@ -24,6 +24,7 @@ export const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
+    line-height: 1;
     padding: 10px;
     li {
       font-size: 17px;

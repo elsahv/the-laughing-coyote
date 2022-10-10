@@ -13,6 +13,10 @@ const Wrapper = styled.div`
   right: 0;
   z-index: 700;
   // border-left: solid 2px black;
+
+  @media only screen and (max-width: 600px) {
+    margin-left: auto;
+  }
 `;
 
 export default function Layout({ children }) {

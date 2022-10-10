@@ -20,12 +20,10 @@ export const NavSection = styled.nav`
   text-decoration: none;
 
   @media only screen and (max-width: 1024px) {
-    width: 300px;
-    display: none;
+    width: 450px;
   }
-
   @media only screen and (max-width: 834px) {
-    width: 250px;
+    width: 350px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -58,8 +56,13 @@ export const Logo = styled.h1`
     color: #000;
     text-decoration: none;
   }
+
+  @media only screen and (max-width: 1024px) {
+    padding-top: 10px;
+  }
+
   @media only screen and (max-width: 834px) {
-    margin-right: 5px;
+    font-size: 40px;
   }
 `;
 
@@ -88,6 +91,14 @@ export const AboutImgWrapper = styled.div`
   grid-area: ls;
   border-right: solid 2px black;
   padding-top: 385px;
+
+  @media only screen and (max-width: 1024px) {
+    padding-top: 805px;
+  }
+
+  @media only screen and (max-width: 834px) {
+    padding-top: 615px;
+  }
 `;
 
 const Header = () => {

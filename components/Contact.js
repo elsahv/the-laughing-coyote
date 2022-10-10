@@ -6,8 +6,8 @@ export const ContentWrapper = styled.div`
   font-weight: bold;
   // background: maroon;
   text-align: right;
-  padding: 20px 10px;
-  border-top: solid 2px black;
+  padding: 80px 10px 20px;
+  // border-top: solid 2px black;
 `;
 
 export const CTA = styled.div`
@@ -20,11 +20,11 @@ export const CTA = styled.div`
   a {
     font-size: 25px;
     // margin: 20px 10px;
-    color: #000;
+    color: aquamarine;
     text-decoration: none;
   }
   a:hover {
-    color: #3aa1aa;
+    color: #fff;
     transition: 1s;
   }
 
@@ -42,7 +42,7 @@ export const CTA = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 30px;
+  font-size: 35wpx;
   color: black;
   text-decoration: underline;
   padding: 0 10px;
