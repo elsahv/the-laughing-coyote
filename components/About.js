@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
-  background: aquamarine;
+  background: #fff;
   display: flex;
   justify-content: center;
   padding: 70px 40px 20px 50px;
@@ -43,17 +43,19 @@ export const Paragraph = styled.div`
   padding: 20px;
   opacity: 0.8;
   line-height: 1.5em;
+  color: #000;
   h4 {
     font-size: 30px;
     padding: 20px 0;
     text-decoration: underline;
   }
   a {
-    color: #000;
+    color: rgb(0, 123, 165);
     margin: 5px;
+    font-weight: 600;
   }
   a:hover {
-    color: teal;
+    color: #000;
     transition: 2s;
   }
 
@@ -90,17 +92,18 @@ const about = () => {
             <Paragraph>
               <h4>About Elsa</h4>
               <p>
-                Im currently working as a freelance web developer while building
-                up my
+                - Im currently working as a freelance web developer while
+                building up my
                 <Link href="/featured-websites">own side projects.</Link>I like
                 to keep multiple hobbies and small business projects, and have
                 created websites to keep track of my progress.
               </p>
               <br />
               <p>
-                My curiosity is what keeps me going, along with the desire to
+                - My curiosity is what keeps me going, along with the desire to
                 help other people with their endeavors.
               </p>
+              {/* ADD CONTACT BELOW CTA */}
             </Paragraph>
           </Grid>
         </Wrapper>

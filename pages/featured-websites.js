@@ -10,13 +10,12 @@ const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  padding-top: 65px;
-  padding-bottom: 35px;
+  padding: 50px 0 30px 125px;
   color: #000;
   // text-shadow: 1px 1px 1px #000;
   font-size: 30px;
-  text-align: center;
-  text-decoration: underline;
+  text-align: left;
+  // text-decoration: underline;
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
@@ -74,11 +73,15 @@ export const Content = styled.div`
   border-left: solid 2px black;
   border-right: solid 2px black;
   padding-top: 15px;
-  padding-left: 20px;
-  text-align: left;
+  // padding-left: 20px;
+  text-align: center;
 `;
 
 export const WebsiteTitle = styled.h3`
+  font-size: 27px;
+  color: aquamarine;
+  padding: 5px 0;
+
   &:hover {
     transition: 1s;
   }
@@ -124,7 +127,7 @@ const featuredWebsites = ({ posts }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         {/* CTA- Like my websites? Contact me to find out more */}
-        <Title id="featuredWebsites">Featured Websites</Title>
+        <Title id="featuredWebsites">- Featured Websites</Title>
         <Wrapper>
           <Grid>
             {posts &&
@@ -135,7 +138,7 @@ const featuredWebsites = ({ posts }) => {
                       <Content>
                         <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
                         <WebsiteDescription>
-                          {post.description}
+                          -{post.description}-
                         </WebsiteDescription>
                       </Content>
                       <ImageScreenshot>

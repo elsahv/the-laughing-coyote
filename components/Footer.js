@@ -7,9 +7,7 @@ const Footer = styled.footer`
   position: absolute;
   bottom: 0;
   right: 0;
-  display: flex;
-  justify-content: flex-start;
-  padding: 5px 10px 25px;
+  padding: 10px 25px;
   @media only screen and (max-width: 600px) {
     display: none;
   }

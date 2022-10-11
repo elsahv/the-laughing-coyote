@@ -3,11 +3,15 @@ import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 import styled from "styled-components";
 
 export const ContentWrapper = styled.div`
-  font-weight: bold;
-  // background: maroon;
+  background: aquamarine;
   text-align: right;
   padding: 40px 10px 600px;
   border-top: solid 2px black;
+
+  p {
+    font-size: 22px;
+    padding: 10px 0;
+  }
 
   @media only screen and (max-width: 600px) {
     padding: 20px 15px;
@@ -23,9 +27,10 @@ export const CTA = styled.div`
 
   a {
     font-size: 25px;
+    // font-weight: bold;
     // margin: 20px 10px;
-    color: aquamarine;
-    text-decoration: none;
+    color: #000;
+    text-decoration: underline;
   }
   a:hover {
     color: #fff;
@@ -48,7 +53,7 @@ export const CTA = styled.div`
 export const Title = styled.h2`
   font-size: 30px;
   color: black;
-  text-decoration: underline;
+  // text-decoration: underline;
   padding: 0 10px;
 
   @media only screen and (max-width: 1024px) {
@@ -57,14 +62,9 @@ export const Title = styled.h2`
 `;
 
 export const SmIcons = styled.div`
-  padding: 10px;
+  padding: 50px 10px 10px 10px;
   display: flex;
   flex-direction: column;
-
-  p {
-    font-size: 22px;
-    padding: 10px 0;
-  }
 
   a {
     color: #000;
@@ -88,12 +88,13 @@ const Contact = () => {
       </Head>
 
       <ContentWrapper id="contact">
-        <Title>Contact</Title>
+        <Title>-Contact</Title>
         <CTA>
+          <p>You can reach me at:</p>
+
           <a href="mailto:devdesignsbyelsa@gmail.com">
             devdesignsbyelsa@gmail.com
           </a>
-
           <SmIcons>
             <p>You can also find me on:</p>
             <a className="sm-icon" href="http://github.com/elsahv">

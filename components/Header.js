@@ -66,7 +66,7 @@ export const Logo = styled.h1`
 `;
 
 export const NavLinks = styled.li`
-  font-size: 22px;
+  font-size: 25px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;

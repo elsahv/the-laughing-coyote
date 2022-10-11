@@ -61,13 +61,13 @@ const skills = () => {
       <Wrapper>
         <SkillsTitle id="services">Services/ Skills</SkillsTitle>
         <ul>
-          <h3>Frontend Web Design</h3>
+          <h3>- Frontend Web Design</h3>
           <li>Colorful websites for creative niches and small businesses.</li>
           <li>Quick and interactive styling</li>
           <li>Effective SEO</li>
         </ul>
         <ul>
-          <h3>Content Management</h3>
+          <h3>- Content Management</h3>
           <li>
             Currently using Sanity.io for content writing, image management, and
             backend data storage
