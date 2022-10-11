@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import About from "./About";
-import Contact from "./Contact";
+// import ContactSection from "./ContactSection";
 
 const Wrapper = styled.div`
   display: none;
@@ -24,7 +24,7 @@ const AboutFooter = styled.footer`
   }
 `;
 
-const ContactSection = styled.footer`
+const ContactWrapper = styled.footer`
   display: none;
 
   @media only screen and (max-width: 600px) {
@@ -40,9 +40,9 @@ const mobileFooterSection = () => {
       <AboutFooter id="contact-mobile">
         <About />
       </AboutFooter>
-      <ContactSection id="contact-mobile">
-        <Contact />
-      </ContactSection>
+      {/* <ContactWrapper id="contact-mobile">
+        <ContactSection />
+      </ContactWrapper> */}
       <span>Elsa Hovey- Copyright @2022</span>
     </Wrapper>
   );

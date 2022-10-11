@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import About from "../components/About";
-import Contact from "../components/Contact";
+// import Contact from "./ContactSection";
 import styled from "styled-components";
 import JtPic from "../public/images/joshuatreeabout.jpg";
 // import { motion } from "framer-motion";
@@ -52,8 +52,9 @@ export const MenuItems = styled.div`
 export const Logo = styled.h1`
   font-size: 50px;
   a {
-    color: #000;
+    color: #fff;
     text-decoration: none;
+    text-shadow: 1px 1px 1px rgb(0, 123, 165);
   }
 
   @media only screen and (max-width: 1024px) {
@@ -76,7 +77,8 @@ export const NavLinks = styled.li`
   a {
     margin: 1px 0;
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgb(0, 123, 165);
 
     &:hover {
       color: aquamarine;
@@ -118,8 +120,8 @@ const Header = () => {
             <NavLinks>
               <Link href="/#services">Services</Link>
               <Link href="/featured-websites">Featured Websites</Link>
-              <Link href="/#about">About</Link>
-              <Link href="/#contact">Contact</Link>
+              {/* <Link href="/#about">About</Link> */}
+              <Link href="/contact/#about">Contact</Link>
             </NavLinks>
           </MenuItems>
 
@@ -133,7 +135,7 @@ const Header = () => {
           </AboutImgWrapper>
 
           <About />
-          <Contact />
+          {/* <Contact /> */}
         </Menu>
         {/* </motion.div> */}
       </NavSection>

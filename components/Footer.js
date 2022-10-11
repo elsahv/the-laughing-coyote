@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import About from "./About";
-import Contact from "./Contact";
 
 const Footer = styled.footer`
   // background: teal;

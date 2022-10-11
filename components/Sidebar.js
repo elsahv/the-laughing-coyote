@@ -2,7 +2,6 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const SidebarWrapper = styled.div`
-  // text-shadow: 1px 1px 1px teal;
   text-align: center;
   padding: 10px;
   display: none;
@@ -25,9 +24,10 @@ export const Logo = styled.div`
   font-weight: bold;
   padding: 10px;
   a {
-    color: #000;
+    color: aquamarine;
+    text-shadow: 1px 1px 1px #000;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -37,11 +37,15 @@ export const Logo = styled.div`
 
 export const NavLinks = styled.div`
   font-size: 20px;
-  padding-top: 10px;
   a {
-    color: #000;
+    color: aquamarine;
+    text-shadow: 1px 1px 1px rgb(0, 123, 165);
     text-decoration: none;
     margin: 0 15px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding-top: 10px;
   }
 
   @media only screen and (max-width: 531px) {
@@ -63,7 +67,7 @@ const Sidebar = () => {
           <Link href="/">Services</Link>
           <Link href="/featured-websites">Featured Websites</Link>
           <Link href="/#about-mobile">About</Link>
-          <Link href="/#contact-mobile">Contact</Link>
+          <Link href="/contact">Contact</Link>
         </NavLinks>
       </SidebarWrapper>
     </>

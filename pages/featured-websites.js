@@ -10,12 +10,13 @@ const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  padding: 50px 0 30px 125px;
+  background: aquamarine;
+  padding: 50px 140px 40px 140px;
+  margin-bottom: 70px;
+  margin-top: 40px;
   color: #000;
-  // text-shadow: 1px 1px 1px #000;
   font-size: 30px;
   text-align: left;
-  // text-decoration: underline;
 
   @media only screen and (max-width: 600px) {
     font-size: 20px;
@@ -26,7 +27,7 @@ export const Title = styled.h2`
 
 export const Grid = styled.div`
   // background: orange;
-  padding: 0 120px;
+  padding: 20px 100px 0;
   margin-bottom: 45px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -68,18 +69,13 @@ export const Website = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  background: teal;
-  border-top: solid 2px black;
-  border-left: solid 2px black;
-  border-right: solid 2px black;
   padding-top: 15px;
-  // padding-left: 20px;
-  text-align: center;
+  text-align: left;
 `;
 
 export const WebsiteTitle = styled.h3`
   font-size: 27px;
-  padding: 5px 0;
+  padding: 5px 0 5px 5px;
 
   &:hover {
     transition: 1s;
@@ -92,8 +88,7 @@ export const WebsiteTitle = styled.h3`
 `;
 
 export const WebsiteDescription = styled.span`
-  padding-left: 5px;
-  padding-bottom: 5px;
+  // padding-left: 5px;
   margin-bottom: 15px;
   font-size: 18px;
 `;
@@ -127,7 +122,7 @@ const featuredWebsites = ({ posts }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         {/* CTA- Like my websites? Contact me to find out more */}
-        <Title id="featuredWebsites">- Featured Websites</Title>
+        <Title id="featuredWebsites">Featured Websites</Title>
         <Wrapper>
           <Grid>
             {posts &&
@@ -138,7 +133,7 @@ const featuredWebsites = ({ posts }) => {
                       <Content>
                         <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
                         <WebsiteDescription>
-                          -{post.description}-
+                          - {post.description} -
                         </WebsiteDescription>
                       </Content>
                       <ImageScreenshot>
