@@ -79,11 +79,11 @@ export const Content = styled.div`
 
 export const WebsiteTitle = styled.h3`
   font-size: 27px;
-  color: aquamarine;
   padding: 5px 0;
 
   &:hover {
     transition: 1s;
+    color: aquamarine;
   }
 
   @media only screen and (max-width: 531px) {
