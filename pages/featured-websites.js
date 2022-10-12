@@ -66,7 +66,7 @@ export const Website = styled.div`
 `;
 
 export const Content = styled.div`
-  background: teal;
+  background: #3aa1aa;
   border-top: solid 2px black;
   border-left: solid 2px black;
   border-right: solid 2px black;
