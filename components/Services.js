@@ -66,16 +66,20 @@ const skills = () => {
           <li>Quick and interactive styling</li>
           <li>Effective SEO</li>
         </ul>
+
         <ul>
           <h3>- Content Management</h3>
           <li>
-            Currently using Sanity.io for content writing, image management, and
-            backend data storage
+            I use React coding with Sanity.io for content writing, image
+            management, and backend data storage
+          </li>
+          <li>
+            Or if Wordpress is your thing... I also create custom themes with
+            php
           </li>
           <li>
             I work one on one with customers to create the ideal website product
           </li>
-          <li>In my freetime, I also work and manage my own projects</li>
         </ul>
       </Wrapper>
     </>

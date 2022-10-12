@@ -26,7 +26,6 @@ export const Title = styled.h2`
 `;
 
 export const Grid = styled.div`
-  // background: orange;
   padding: 20px 100px 0;
   margin-bottom: 45px;
   display: grid;
@@ -39,7 +38,7 @@ export const Grid = styled.div`
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
-    padding: 0 10px;
+    padding: 10px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -67,28 +66,36 @@ export const Website = styled.div`
 `;
 
 export const Content = styled.div`
+  background: teal;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-right: solid 2px black;
   display: flex;
   flex-direction: column;
   padding-top: 15px;
+  padding-left: 20px;
   text-align: left;
+  &:hover {
+    background: #3aa1aa;
+    transition: 1s;
+  }
 `;
 
 export const WebsiteTitle = styled.h3`
   font-size: 27px;
-  padding: 5px 0 5px 5px;
+  padding: 2px 0 5px 2px;
 
   &:hover {
     transition: 1s;
     color: aquamarine;
   }
 
-  @media only screen and (max-width: 531px) {
+  @media only screen and (max-width: 800px) {
     font-size: 18px;
   }
 `;
 
 export const WebsiteDescription = styled.span`
-  // padding-left: 5px;
   margin-bottom: 15px;
   font-size: 18px;
 `;
@@ -96,11 +103,12 @@ export const WebsiteDescription = styled.span`
 export const ImageScreenshot = styled.div`
   .website-screenshot {
     border: solid 2px black;
-    @media only screen and (max-width: 834px) {
+
+    @media only screen and (max-width: 1024px) {
       height: 250px;
     }
+    
   }
-
   }
 `;
 
@@ -121,7 +129,6 @@ const featuredWebsites = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        {/* CTA- Like my websites? Contact me to find out more */}
         <Title id="featuredWebsites">Featured Websites</Title>
         <Wrapper>
           <Grid>
@@ -133,7 +140,7 @@ const featuredWebsites = ({ posts }) => {
                       <Content>
                         <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
                         <WebsiteDescription>
-                          - {post.description} -
+                          -{post.description}-
                         </WebsiteDescription>
                       </Content>
                       <ImageScreenshot>
