@@ -30,7 +30,7 @@ export const Grid = styled.div`
   margin-bottom: 45px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
+  grid-gap: 5em;
   a {
     color: #000;
     text-decoration: none;
@@ -66,28 +66,29 @@ export const Website = styled.div`
 `;
 
 export const Content = styled.div`
-  background: #3aa1aa;
-  border-top: solid 2px black;
-  border-left: solid 2px black;
-  border-right: solid 2px black;
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
-  padding-left: 20px;
+  padding-top: 5px;
+  padding-left: 0px;
   text-align: left;
+  // border-top: solid 2px black;
+  // border-left: solid 2px black;
+  // border-right: solid 2px black;
+  // background: #3aa1aa;
   &:hover {
-    background: #3aa1aa;
     transition: 1s;
   }
 `;
 
 export const WebsiteTitle = styled.h3`
-  font-size: 27px;
+  font-size: 23px;
   padding: 2px 0 5px 2px;
+  color: #000;
+  font-weight: bold;
 
   &:hover {
     transition: 1s;
-    color: aquamarine;
+    color: rgb(0, 123, 165);
   }
 
   @media only screen and (max-width: 800px) {
@@ -98,6 +99,7 @@ export const WebsiteTitle = styled.h3`
 export const WebsiteDescription = styled.span`
   margin-bottom: 15px;
   font-size: 18px;
+  color: #000;
 `;
 
 export const ImageScreenshot = styled.div`
@@ -107,7 +109,6 @@ export const ImageScreenshot = styled.div`
     @media only screen and (max-width: 1024px) {
       height: 250px;
     }
-    
   }
   }
 `;
@@ -140,13 +141,13 @@ const featuredWebsites = ({ posts }) => {
                       <Content>
                         <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
                         <WebsiteDescription>
-                          -{post.description}-
+                          - {post.description}
                         </WebsiteDescription>
                       </Content>
                       <ImageScreenshot>
                         <img
                           width="100%"
-                          height="350px"
+                          height="400px"
                           className="website-screenshot"
                           src={urlFor(post.websiteImg)}
                           alt=""
