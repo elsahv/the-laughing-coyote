@@ -22,16 +22,11 @@ export const SidebarWrapper = styled.div`
 
 export const Logo = styled.div`
   font-weight: bold;
-  padding: 10px;
   a {
     color: aquamarine;
     text-shadow: 1px 1px 1px #000;
     text-decoration: none;
     font-size: 35px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    padding: 2px;
   }
 `;
 
@@ -66,7 +61,7 @@ const Sidebar = () => {
         <NavLinks>
           <Link href="/">Services</Link>
           <Link href="/featured-websites">Featured Websites</Link>
-          <Link href="/#about-mobile">About</Link>
+          <Link href="/contact/#about-mobile">About</Link>
           <Link href="/contact">Contact</Link>
         </NavLinks>
       </SidebarWrapper>

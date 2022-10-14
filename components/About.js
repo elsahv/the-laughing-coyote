@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   padding: 70px 40px 20px 50px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 0 0 80px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -31,9 +35,9 @@ export const ImageWrapper = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: 25px;
     left: 50%;
     transform: translateX(-50%);
+    margin-left: 20px;
   }
 `;
 
@@ -67,11 +71,15 @@ export const Paragraph = styled.div`
       font-size: 18px;
     }
   }
+
   @media only screen and (max-width: 600px) {
-    padding: 0;
-    h4 {
-      text-align: center;
-    }
+    // padding: 0 25px;
+    padding-left: 155px;
+    // background: green;
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 390px) {
+    padding-left: 175px;
   }
 `;
 

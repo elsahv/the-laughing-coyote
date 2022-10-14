@@ -17,24 +17,46 @@ export const Wrapper = styled.div`
   }
 
   li {
-    font-size: 24px;
+    font-size: 20px;
     list-style-type: none;
     padding: 3px 0;
-    // color: rgb(0, 123, 165);
   }
 
-  @media only screen and (max-width: 768px) {
-    // line-height: 1;
-    padding: 10px;
+  @media only screen and (max-width: 1024px) {
+    text-align: left;
+    padding: 10px 25px;
+    margin-top: 40px;
+    margin-left: 10px;
+
+    h3 {
+      margin-top: 35px;
+    }
     li {
       font-size: 17px;
-      padding: 10px 0;
+      padding: 10px 0 0 20px;
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
     ul {
       margin: 0px 10px;
+    }
+    li {
+      padding-left: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 834px) {
+    padding-left: 50px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 10px;
+  }
+
+  @media only screen and (max-width: 390px) {
+    h3 {
+      font-size: 18px;
     }
   }
 `;
@@ -47,11 +69,17 @@ export const SkillsTitle = styled.h2`
   font-size: 35px;
   text-align: right;
 
+  @media only screen and (max-width: 1024px) {
+    font-size: 32px;
+    padding-top: 60px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
   @media only screen and (max-width: 600px) {
-    font-size: 30px;
-    padding-bottom: 15px;
     padding-top: 55px;
-    padding-right: 2px;
+    padding-left: 20px;
+    text-decoration: underline;
   }
 `;
 

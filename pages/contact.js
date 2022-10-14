@@ -1,6 +1,16 @@
 import Head from "next/head";
 import ContactSection from "../components/ContactSection";
+import About from "../components/About";
 import { motion } from "framer-motion";
+import styled from "styled-components";
+
+const AboutFooter = styled.footer`
+  display: none;
+
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+`;
 
 const contact = () => {
   return (
@@ -15,6 +25,9 @@ const contact = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
+        <AboutFooter id="about-mobile">
+          <About />
+        </AboutFooter>
         <ContactSection />
       </motion.div>
     </>

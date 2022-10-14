@@ -38,8 +38,8 @@ export default function Layout({ children }) {
         <main>{children}</main>
       </Wrapper>
 
-      <Footer />
-      <MobileFooter />
+      {/* <Footer /> */}
+      {/* <MobileFooter /> */}
     </>
   );
 }

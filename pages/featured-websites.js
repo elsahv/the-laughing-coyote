@@ -9,15 +9,18 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export const Title = styled.h2`
-  background: aquamarine;
-  padding: 50px 140px 40px 140px;
-  margin-bottom: 70px;
-  margin-top: 40px;
-  color: #000;
+export const PageTitle = styled.h2`
+  margin-top: 60px;
+  padding-left: 120px;
   font-size: 30px;
   text-align: left;
+  opacity: 0.9;
+  text-decoration: underline;
 
+  @media only screen and (max-width: 1024px) {
+    padding-left: 35px;
+    margin-bottom: 20px;
+  }
   @media only screen and (max-width: 600px) {
     font-size: 20px;
     padding: 30px;
@@ -26,8 +29,10 @@ export const Title = styled.h2`
 `;
 
 export const Grid = styled.div`
-  padding: 20px 100px 0;
-  margin-bottom: 45px;
+  // background: green;
+
+  padding: 20px 40px 0;
+  margin: 0 25px 45px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 5em;
@@ -38,7 +43,7 @@ export const Grid = styled.div`
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
-    padding: 10px;
+    padding: auto;
   }
 
   @media only screen and (max-width: 600px) {
@@ -48,6 +53,7 @@ export const Grid = styled.div`
 
 export const Website = styled.div`
   cursor: pointer;
+  // border: solid 2px black;
   &:hover {
     opacity: 0.8;
     transition: 1s;
@@ -71,10 +77,6 @@ export const Content = styled.div`
   padding-top: 5px;
   padding-left: 0px;
   text-align: left;
-  // border-top: solid 2px black;
-  // border-left: solid 2px black;
-  // border-right: solid 2px black;
-  // background: #3aa1aa;
   &:hover {
     transition: 1s;
   }
@@ -107,7 +109,12 @@ export const ImageScreenshot = styled.div`
     border: solid 2px black;
 
     @media only screen and (max-width: 1024px) {
+      height: 300px;
+    }
+
+    @media only screen and (max-width: 810px) {
       height: 250px;
+
     }
   }
   }
@@ -130,7 +137,7 @@ const featuredWebsites = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Title id="featuredWebsites">Featured Websites</Title>
+        <PageTitle id="featuredWebsites">Featured Websites</PageTitle>
         <Wrapper>
           <Grid>
             {posts &&

@@ -8,32 +8,21 @@ import { motion } from "framer-motion";
 //STYLES
 const Wrapper = styled.div``;
 
-const Grid = styled.div`
+export const Quote = styled.div`
+  opacity: 0.8;
+  background: teal;
+  padding: 35px;
+  grid-area: rs;
   margin-top: 40px;
   margin-left: 60px;
-  display: grid;
-  grid-template-column: 1fr 1fr;
-  grid-template-areas: "ls rs";
-  background: teal;
-  padding-bottom: 45px;
-  padding-left: 20px;
-  opacity: 0.8;
-`;
-
-export const Quote = styled.div`
-  grid-area: rs;
-  margin-top: 45px;
-  margin-left: 20px;
   h4 {
-    font-size: 35px;
+    font-size: 30px;
     color: #000;
   }
-
   p {
-    font-size: 27px;
+    font-size: 24px;
     color: #000;
   }
-
   a {
     color: #000;
     text-decoration: underline;
@@ -45,13 +34,27 @@ export const Quote = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
+    margin-left: 30px;
     h4 {
       font-size: 27px;
-      padding-top: 10px;
     }
     p {
       font-size: 20px;
     }
+  }
+
+  @media only screen and (max-width: 834px) {
+    margin-left: 90px;
+    margin-top: 50px;
+  }
+  @media only screen and (max-width: 768px) {
+    margin-left: 50px;
+    // margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    // margin-left: 70px;
+    margin-top: 40px;
   }
 `;
 
@@ -72,18 +75,16 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <Grid>
-            <Quote>
-              <h4>
-                Hi there,
-                <Link href="/#about">Im Elsa.</Link>
-              </h4>
-              <p>
-                Im a web developer based in Joshua Tree, CA. I create niche
-                websites and solutions for small business owners and creatives.{" "}
-              </p>
-            </Quote>
-          </Grid>
+          <Quote>
+            <h4>
+              Hi there,
+              <Link href="/#about">Im Elsa.</Link>
+            </h4>
+            <p>
+              Im a web developer based in Joshua Tree, CA. I create niche
+              websites and solutions for small business owners and creatives.{" "}
+            </p>
+          </Quote>
 
           <Services />
         </motion.div>

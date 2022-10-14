@@ -37,9 +37,9 @@ const ContactWrapper = styled.footer`
 const mobileFooterSection = () => {
   return (
     <Wrapper>
-      <AboutFooter id="contact-mobile">
+      {/* <AboutFooter id="contact-mobile">
         <About />
-      </AboutFooter>
+      </AboutFooter> */}
       {/* <ContactWrapper id="contact-mobile">
         <ContactSection />
       </ContactWrapper> */}
