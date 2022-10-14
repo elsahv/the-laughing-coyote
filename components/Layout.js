@@ -12,9 +12,18 @@ const Wrapper = styled.div`
   position: absolute;
   right: 0;
   z-index: 700;
+  // background: maroon;
+
+  @media only screen and (max-width: 1024px) {
+    // margin-left: 250px;
+  }
+
+  @media only screen and (max-width: 834px) {
+    margin-left: 300px;
+  }
 
   @media only screen and (max-width: 600px) {
-    margin-left: auto;
+    margin: 0px;
   }
 `;
 

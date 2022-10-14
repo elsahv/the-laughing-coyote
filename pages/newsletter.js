@@ -5,40 +5,37 @@ import styled from "styled-components";
 
 // STYLES
 const Wrapper = styled.div`
-  // background: #3aa1aa;
   padding: 65px;
+  opacity: 0.8;
+  // background: green;
   @media only screen and (max-width: 1024px) {
-    padding-top: 150px;
+    padding: 30px 10px;
   }
-`;
 
-const Navbar = styled.div`
-  height: 120px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 105px;
-  @media only screen and (max-width: 1024px) {
-    margin: auto;
+  @media only screen and (max-width: 834px) {
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 0px;
   }
 `;
 
 const Logo = styled.div`
-  background: teal;
   font-size: 45px;
   padding: 25px;
-`;
 
-const Content = styled.div`
-  padding: 25px;
+  @media only screen and (max-width: 834px) {
+    padding-left: 60px;
+    padding-top: 65px;
+    font-size: 35px;
+  }
 `;
 
 const BlogWrapper = styled.div`
-  margin: 55px 105px;
   padding-top: 25px;
   padding-bottom: 25px;
   border-top: solid 2px gray;
-  border-bottom: solid 2px gray;
   @media only screen and (max-width: 1024px) {
     margin: auto;
   }
@@ -48,17 +45,23 @@ const Post = styled.div`
   display: flex;
   margin: 15px;
   cursor: pointer;
-  @media only screen and (max-width: 531px) {
+  // background: pink;
+  @media only screen and (max-width: 834px) {
     flex-direction: column;
     margin: 25px 55px;
   }
+
+  @media only screen and (max-width: 768px) {
+    margin: 25px 15px;
+  }
+
   @media only screen and (max-width: 531px) {
     margin: 25px 5px;
   }
 `;
 
 const Section = styled.div`
-  padding: 25px 55px;
+  padding-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,30 +70,31 @@ const Section = styled.div`
     padding: auto;
   }
   @media only screen and (max-width: 600px) {
-    padding: 10px;
+    padding: 0px;
   }
 `;
 
 const PostTitle = styled.h3`
-  font-size: 25px;
-  color: #3aa1aa;
-  text-transform: capitalize;
+  font-size: 20px;
   text-align: left;
   width: 100%;
   &:hover {
     text-decoration: underline;
+    color: rgb(0, 123, 165);
+    transition: 2s;
   }
   @media only screen and (max-width: 834px) {
     padding: 0;
   }
-  @media only screen and (max-width: 834px) {
+  @media only screen and (max-width: 600px) {
     font-size: 18px;
+    // text-align: center;
   }
 `;
 
 const PostDescription = styled.div`
-  color: #3aa1aa;
-  font-size: 22px;
+  font-size: 20px;
+  padding-top: 10px;
   @media only screen and (max-width: 834px) {
     font-size: 16px;
   }
@@ -105,11 +109,7 @@ const Home = ({ posts }) => {
   return (
     <>
       <Wrapper>
-        <Navbar>
-          <Content>
-            <Logo>Newsletter</Logo>
-          </Content>
-        </Navbar>
+        <Logo>Newsletter</Logo>
 
         <BlogWrapper>
           {posts &&

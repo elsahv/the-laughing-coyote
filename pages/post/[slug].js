@@ -11,7 +11,7 @@ export const MainImgWrapper = styled.div`
   justify-content: center;
   margin-top: 20px;
   .img {
-    width: 1380px;
+    width: 380px;
     border: solid 2px black;
   }
 `;
@@ -23,23 +23,19 @@ export const ImagesWrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 35px;
+  font-size: 25px;
   text-align: left;
-  padding: 60px 30px 10px;
-  text-transform: capitalize;
-  text-shadow: 1px 1px 1px black;
-  color: #fff;
-  @media only screen and (max-width: 1024px) {
-  }
+  padding: 20px 0px;
 `;
 
 export const BodyContent = styled.div`
+  opacity: 0.8;
   text-align: left;
   font-size: 17px;
   line-height: 2em;
   margin-top: 80px;
-  background: coral;
-  padding: 30px 80px;
+  background: aquamarine;
+  padding: 30px 250px;
   @media only screen and (max-width: 1024px) {
     margin: 20px 100px;
   }
@@ -66,15 +62,15 @@ const PostComponents = {
   },
 };
 
-const Post = ({ title, mainImage, body }) => {
+const Post = ({ title, image, body }) => {
   return (
     <>
-      <Title>{title}</Title>
-
       <MainImgWrapper>
-        <img src={urlFor(mainImage)} alt="" className="img" />
+        <img src={urlFor(image)} alt="" className="img" />
       </MainImgWrapper>
       <BodyContent>
+        <Title>{title}</Title>
+
         <PortableText value={body} components={PostComponents} />
       </BodyContent>
     </>
@@ -86,7 +82,8 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = `*[_type == "newsletter" && slug.current == $pageSlug][0]{
     title,
-    description,
+    image,
+    // description,
     body,
   }`;
 
@@ -101,7 +98,7 @@ export const getServerSideProps = async (pageContext) => {
     return {
       props: {
         title: post.title,
-        mainImage: post.mainImage,
+        image: post.image,
         body: post.body,
       },
     };
