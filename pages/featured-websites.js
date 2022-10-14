@@ -141,7 +141,7 @@ const featuredWebsites = ({ posts }) => {
                       <Content>
                         <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
                         <WebsiteDescription>
-                          - {post.descriptiwon}
+                          - {post.description}
                         </WebsiteDescription>
                       </Content>
                       <ImageScreenshot>
