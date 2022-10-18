@@ -7,15 +7,16 @@ import { motion } from "framer-motion";
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 85px;
 `;
 
 export const PageTitle = styled.h2`
-  margin-top: 60px;
-  padding-left: 120px;
+  padding: 70px 30px 50px;
   font-size: 30px;
-  text-align: left;
+  text-align: center;
   opacity: 0.9;
-  text-decoration: underline;
+  background: teal;
+  // border-bottom: solid 2px black;
 
   @media only screen and (max-width: 1024px) {
     padding-left: 35px;
@@ -30,12 +31,11 @@ export const PageTitle = styled.h2`
 
 export const Grid = styled.div`
   // background: green;
-
-  padding: 20px 40px 0;
-  margin: 0 25px 45px;
+  padding: 20px 80px;
+  margin: 5px 85px 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5em;
+  grid-gap: 4em;
   a {
     color: #000;
     text-decoration: none;
@@ -53,10 +53,11 @@ export const Grid = styled.div`
 
 export const Website = styled.div`
   cursor: pointer;
-  // border: solid 2px black;
+  transition: all 0.3s ease;
+  // background: green;
+
   &:hover {
     opacity: 0.8;
-    transition: 1s;
   }
   a {
     color: #000;
@@ -71,22 +72,10 @@ export const Website = styled.div`
   }
 `;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-top: 5px;
-  padding-left: 0px;
-  text-align: left;
-  &:hover {
-    transition: 1s;
-  }
-`;
-
 export const WebsiteTitle = styled.h3`
-  font-size: 23px;
-  padding: 2px 0 5px 2px;
+  font-size: 25px;
+  padding: 0px 0 10px 0px;
   color: #000;
-  font-weight: bold;
 
   &:hover {
     transition: 1s;
@@ -99,9 +88,10 @@ export const WebsiteTitle = styled.h3`
 `;
 
 export const WebsiteDescription = styled.span`
-  margin-bottom: 15px;
   font-size: 18px;
+  text-align: center;
   color: #000;
+  padding-left: 5px;
 `;
 
 export const ImageScreenshot = styled.div`
@@ -145,21 +135,20 @@ const featuredWebsites = ({ posts }) => {
                 <span key={index}>
                   <a target="_blank" href={post.projectLink} rel="noreferrer">
                     <Website>
-                      <Content>
-                        <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
-                        <WebsiteDescription>
-                          - {post.description}
-                        </WebsiteDescription>
-                      </Content>
+                      <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
+
                       <ImageScreenshot>
                         <img
                           width="100%"
-                          height="400px"
+                          height="350px"
                           className="website-screenshot"
                           src={urlFor(post.websiteImg)}
                           alt=""
                         />
                       </ImageScreenshot>
+                      <WebsiteDescription>
+                        -{post.description}
+                      </WebsiteDescription>
                     </Website>
                   </a>
                 </span>
