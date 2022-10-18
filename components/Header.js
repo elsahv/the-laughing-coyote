@@ -1,10 +1,10 @@
+import React, { useState, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import About from "../components/About";
-// import Contact from "./ContactSection";
 import styled from "styled-components";
 import JtPic from "../public/images/joshuatreeabout.jpg";
-// import { motion } from "framer-motion";
 
 export const NavSection = styled.nav`
   overflow-y: scroll;
@@ -120,12 +120,8 @@ const Header = () => {
   return (
     <>
       <NavSection>
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-        > */}
         <Menu>
+          <FaBars />
           <MenuItems>
             <Logo>
               <Link href="/">Elsa Hovey-</Link>
@@ -150,9 +146,7 @@ const Header = () => {
           </AboutImgWrapper>
 
           <About />
-          {/* <Contact /> */}
         </Menu>
-        {/* </motion.div> */}
       </NavSection>
     </>
   );
