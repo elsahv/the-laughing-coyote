@@ -105,7 +105,7 @@ export const AboutImgWrapper = styled.div`
   width: 670px;
   grid-area: ls;
   border-right: solid 2px black;
-  padding-top: 385px;
+  padding-top: 355px;
 
   @media only screen and (max-width: 1024px) {
     padding-top: 805px;
