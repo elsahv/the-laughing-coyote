@@ -13,7 +13,7 @@ export const NavSection = styled.nav`
   height: 100%;
   position: absolute;
   left: 0;
-  border-right: solid 2px #000;
+  border-right: solid 2px gray;
   background-color: #3aa1aa;
   z-index: 1000;
   text-decoration: none;
