@@ -105,14 +105,14 @@ export const AboutImgWrapper = styled.div`
   width: 670px;
   grid-area: ls;
   border-right: solid 2px black;
-  padding-top: 355px;
+  padding-top: 335px;
 
   @media only screen and (max-width: 1024px) {
-    padding-top: 805px;
+    padding-top: 785px;
   }
 
   @media only screen and (max-width: 834px) {
-    padding-top: 615px;
+    padding-top: 595px;
   }
 `;
 
