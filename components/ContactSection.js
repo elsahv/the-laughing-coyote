@@ -57,6 +57,8 @@ export const Title = styled.h2`
   margin-top: 55px;
   padding: 30px 40px 30px 300px;
   background: #3aa1aa;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(0, 123, 165);
   text-align: right;
 
   @media only screen and (max-width: 1024px) {

@@ -11,12 +11,14 @@ const Wrapper = styled.div`
 `;
 
 export const PageTitle = styled.h2`
+  width: 100%;
   padding: 70px 30px 50px;
   font-size: 30px;
   text-align: center;
   opacity: 0.9;
   background: teal;
-  // border-bottom: solid 2px black;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(0, 123, 165);
 
   @media only screen and (max-width: 1024px) {
     padding-left: 35px;
@@ -43,11 +45,21 @@ export const Grid = styled.div`
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
-    padding: auto;
+    padding: 5px 20px;
+    margin: 10px 35px;
   }
 
-  @media only screen and (max-width: 600px) {
-    padding: 20px;
+  @media only screen and (max-width: 768px) {
+    padding: 0px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 20px 40px;
+  }
+
+  @media only screen and (max-width: 531px) {
+    padding: 20px 0;
+    margin: 30px 10px;
   }
 `;
 

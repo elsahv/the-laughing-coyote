@@ -59,7 +59,7 @@ export const Logo = styled.h1`
   a {
     color: #fff;
     text-decoration: none;
-    text-shadow: 1px 1px 1px rgb(0, 123, 165);
+    text-shadow: 1px 1px 1px #000;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -76,7 +76,7 @@ export const PageID = styled.h2`
 
   padding: 5x 0;
   color: #fff;
-  text-shadow: 1px 1px 1px rgb(0, 123, 165);
+  text-shadow: 1px 1px 1px #000;
 `;
 
 export const NavLinks = styled.li`
@@ -94,8 +94,9 @@ export const NavLinks = styled.li`
     text-shadow: 1px 1px 1px rgb(0, 123, 165);
 
     &:hover {
-      color: aquamarine;
+      // color: aquamarine;
       transition: 1s;
+      text-shadow: 1px 1px 1px #000;
     }
   }
 `;

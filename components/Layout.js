@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 834px) {
-    margin-left: 300px;
+    margin-left: 325px;
   }
 
   @media only screen and (max-width: 600px) {
