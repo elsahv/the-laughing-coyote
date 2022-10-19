@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import Link from "next/link";
-
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
@@ -88,6 +86,17 @@ const Wrapper = styled.div`
   }
 `;
 
+const SidebarLogo = styled.div`
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  // background: red;
+  width: 100%;
+`;
+
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -99,6 +108,11 @@ function Navbar() {
           <a href="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </a>
+          <SidebarLogo>
+            Elsa Hovey-
+            <br />
+            Development/ Design
+          </SidebarLogo>
         </div>
         <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
           <ul className="nav-menu-items" onClick={showSidebar}>
