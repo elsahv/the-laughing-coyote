@@ -91,7 +91,7 @@ function Subscribe() {
     e.preventDefault();
     setState("Loading");
     try {
-      const response = await axios.post("/api/subscribeApi", { email });
+      const response = await axios.post("/api/subscribe", { email });
       setState("Success");
       setEmail("");
     } catch (e) {
