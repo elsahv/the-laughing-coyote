@@ -54,7 +54,7 @@ export const MenuItems = styled.div`
 `;
 
 export const Logo = styled.h1`
-  font-size: 40px;
+  font-size: 32px;
   // background: green;
   a {
     color: #fff;
@@ -73,10 +73,12 @@ export const Logo = styled.h1`
 
 export const PageID = styled.h2`
   font-size: 30px;
-
   padding: 5x 0;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+  }
 `;
 
 export const NavLinks = styled.li`
@@ -126,13 +128,14 @@ const Header = () => {
             <Logo>
               <Link href="/">Elsa Hovey-</Link>
             </Logo>
-            <PageID>Development/ Design</PageID>
-
+            <PageID>
+              <Link href="/">Development/ Design</Link>
+            </PageID>
             <NavLinks>
               <Link href="/#services">Services</Link>
               <Link href="/featured-websites">Featured Websites</Link>
               <Link href="/contact/#about">Contact</Link>
-              <Link href="/newsletter">Newsletter</Link>
+              <Link href="/newsletter/#subscribe">Newsletter</Link>
             </NavLinks>
           </MenuItems>
 

@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
+import SubscribeSection from "../components/SubscribeSection";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
   background: #fff;
   display: flex;
   justify-content: center;
-  padding: 70px 40px 20px 50px;
 
   @media only screen and (max-width: 600px) {
     padding: 0 0 0 80px;
@@ -24,10 +24,12 @@ export const Grid = styled.div`
 
 export const ImageWrapper = styled.div`
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 250px;
   grid-area: a;
   border: solid 2px black;
-  margin-left: 20px;
+  margin-top: 50px;
 
   @media only screen and (max-width: 834px) {
     margin-top: 30px;
@@ -41,18 +43,9 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const Paragraph = styled.div`
+export const AboutContent = styled.div`
   grid-area: b;
-  font-size: 20px;
-  padding: 20px;
-  opacity: 0.8;
-  line-height: 1.5em;
-  color: #000;
-  h4 {
-    font-size: 30px;
-    padding: 20px 0;
-    text-decoration: underline;
-  }
+  // opacity: 0.8;
   a {
     color: rgb(0, 123, 165);
     margin: 5px;
@@ -73,14 +66,24 @@ export const Paragraph = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    // padding: 0 25px;
     padding-left: 155px;
-    // background: green;
     font-size: 16px;
   }
   @media only screen and (max-width: 390px) {
     padding-left: 175px;
   }
+`;
+
+export const AboutTitle = styled.h4`
+  font-size: 30px;
+  padding: 20px 0;
+  text-decoration: underline;
+  text-align: center;
+`;
+export const Paragraph = styled.p`
+  padding: 10px 15px;
+  font-size: 18px;
+  line-height: 1.5;
 `;
 
 const about = () => {
@@ -97,22 +100,22 @@ const about = () => {
                 layout="responsive"
               />
             </ImageWrapper>
-            <Paragraph>
-              <h4>About Elsa</h4>
-              <p>
+            <AboutContent>
+              <AboutTitle>About Elsa</AboutTitle>
+              <Paragraph>
                 - Im currently working as a freelance web developer while
                 building up my
                 <Link href="/featured-websites">own side projects.</Link>I like
                 to keep multiple hobbies and small business projects, and have
                 created websites to keep track of my progress.
-              </p>
+              </Paragraph>
               <br />
-              <p>
+              <Paragraph>
                 - My curiosity is what keeps me going, along with the desire to
                 help other people with their endeavors.
-              </p>
-              {/* ADD CONTACT BELOW CTA */}
-            </Paragraph>
+              </Paragraph>
+              <SubscribeSection />
+            </AboutContent>
           </Grid>
         </Wrapper>
       </div>

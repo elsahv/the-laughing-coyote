@@ -1,13 +1,20 @@
 import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
 import { motion } from "framer-motion";
+import SubscribeSection from "../components/SubscribeSection";
 import styled from "styled-components";
 
 // STYLES
+
+const SubscribeWrapper = styled.div`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+`;
 const Wrapper = styled.div`
   padding: 65px;
   opacity: 0.8;
-  // background: green;
   @media only screen and (max-width: 1024px) {
     padding: 30px 10px;
   }
@@ -108,6 +115,10 @@ const PostDescription = styled.div`
 const Home = ({ posts }) => {
   return (
     <>
+      <SubscribeWrapper>
+        <SubscribeSection />
+      </SubscribeWrapper>
+
       <Wrapper>
         <Logo>Newsletter</Logo>
 
