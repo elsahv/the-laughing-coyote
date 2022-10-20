@@ -15,7 +15,7 @@ export const PageTitle = styled.h2`
   padding: 70px 30px 50px;
   font-size: 30px;
   text-align: center;
-  opacity: 0.9;
+  opacity: 0.8;
   background: teal;
   color: #fff;
   text-shadow: 1px 1px 1px rgb(0, 123, 165);
