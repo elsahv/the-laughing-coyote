@@ -81,7 +81,8 @@ export const AboutTitle = styled.h4`
   text-align: center;
 `;
 export const Paragraph = styled.p`
-  padding: 10px 15px;
+  padding: 10px 25px;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 1.5;
 `;

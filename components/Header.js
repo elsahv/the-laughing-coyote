@@ -9,7 +9,7 @@ import JtPic from "../public/images/joshuatreeabout.jpg";
 export const NavSection = styled.nav`
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 450px;
+  width: 500px;
   height: 100%;
   position: absolute;
   left: 0;

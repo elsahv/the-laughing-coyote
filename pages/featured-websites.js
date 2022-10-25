@@ -4,20 +4,15 @@ import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 85px;
-`;
-
 export const PageTitle = styled.h2`
   width: 100%;
-  padding: 70px 30px 50px;
+  padding: 70px 80px 50px;
+  margin-bottom: 30px;
   font-size: 30px;
-  text-align: center;
+  text-align: left;
   opacity: 0.8;
   background: teal;
-  color: #fff;
+  color: #000;
   text-shadow: 1px 1px 1px rgb(0, 123, 165);
 
   @media only screen and (max-width: 1024px) {
@@ -31,12 +26,11 @@ export const PageTitle = styled.h2`
   }
 `;
 
-export const Grid = styled.div`
+const Wrapper = styled.div`
   // background: green;
-  padding: 20px 80px;
-  margin: 5px 85px 25px;
+  margin: 0 80px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 4em;
   a {
     color: #000;
@@ -45,6 +39,7 @@ export const Grid = styled.div`
 
   @media only screen and (max-width: 1024px) {
     grid-template-columns: 1fr;
+    // padding: 20px 80px;
     padding: 5px 20px;
     margin: 10px 35px;
   }
@@ -66,7 +61,8 @@ export const Grid = styled.div`
 export const Website = styled.div`
   cursor: pointer;
   transition: all 0.3s ease;
-  // background: green;
+  // background: red;
+  margin: 40px auto;
 
   &:hover {
     opacity: 0.8;
@@ -83,11 +79,15 @@ export const Website = styled.div`
     margin-right: 15px;
   }
 `;
+export const TopContent = styled.div`
+  // background: teal;
+  padding: 10px 10px 15px;
+`;
 
 export const WebsiteTitle = styled.h3`
-  font-size: 25px;
-  padding: 0px 0 10px 0px;
+  font-size: 30px;
   color: #000;
+  padding: 3px 0;
 
   &:hover {
     transition: 1s;
@@ -100,10 +100,9 @@ export const WebsiteTitle = styled.h3`
 `;
 
 export const WebsiteDescription = styled.span`
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   color: #000;
-  padding-left: 5px;
 `;
 
 export const ImageScreenshot = styled.div`
@@ -141,31 +140,31 @@ const featuredWebsites = ({ posts }) => {
       >
         <PageTitle id="featuredWebsites">Featured Websites</PageTitle>
         <Wrapper>
-          <Grid>
-            {posts &&
-              posts.map((post, index) => (
-                <span key={index}>
-                  <a target="_blank" href={post.projectLink} rel="noreferrer">
-                    <Website>
+          {posts &&
+            posts.map((post, index) => (
+              <span key={index}>
+                <a target="_blank" href={post.projectLink} rel="noreferrer">
+                  <Website>
+                    <TopContent>
                       <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
-
-                      <ImageScreenshot>
-                        <img
-                          width="100%"
-                          height="350px"
-                          className="website-screenshot"
-                          src={urlFor(post.websiteImg)}
-                          alt=""
-                        />
-                      </ImageScreenshot>
                       <WebsiteDescription>
                         -{post.description}
                       </WebsiteDescription>
-                    </Website>
-                  </a>
-                </span>
-              ))}
-          </Grid>
+                    </TopContent>
+
+                    <ImageScreenshot>
+                      <img
+                        width="80%"
+                        height="100%"
+                        className="website-screenshot"
+                        src={urlFor(post.websiteImg)}
+                        alt=""
+                      />
+                    </ImageScreenshot>
+                  </Website>
+                </a>
+              </span>
+            ))}
         </Wrapper>
       </motion.div>
     </>

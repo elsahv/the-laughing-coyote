@@ -21,7 +21,7 @@ export const SubFormContainer = styled.div`
 
 export const Input = styled.input`
   padding: 8px 90px 8px 10px;
-  border: 1px solid #000;
+  border: 2px solid #000;
   font-size: 16px;
   background: #fff;
 
@@ -42,7 +42,6 @@ export const Button = styled.button`
   background: teal;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
-  background: coral;
   cursor: pointer;
       /* :disabled {
         background: #636262;
@@ -53,8 +52,8 @@ export const Button = styled.button`
     cursor: not-allowed;
   }
   &:hover {
-    background: aquamarine;
-    color: #000;
+    background: #fff;
+    color: teal;
     text-shadow: none;
     transition: 1s;
   }

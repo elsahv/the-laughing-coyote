@@ -6,11 +6,11 @@ import Footer from "./Footer";
 import MobileFooter from "./MobileFooter";
 
 const Wrapper = styled.div`
-  margin-left: 450px;
+  margin-left: 550px;
   overflow-y: scroll;
   height: 100%;
   position: absolute;
-  right: 0;
+  top: 0;
   z-index: 700;
   // background: maroon;
 
