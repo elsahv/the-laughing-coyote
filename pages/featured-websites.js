@@ -28,7 +28,7 @@ export const PageTitle = styled.h2`
 
 const Wrapper = styled.div`
   // background: green;
-  margin: 0 80px;
+  padding: 0 70px 0 10px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4em;
@@ -38,18 +38,8 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    grid-template-columns: 1fr;
-    // padding: 20px 80px;
-    padding: 5px 20px;
-    margin: 10px 35px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    padding: 0px;
-  }
-
-  @media only screen and (max-width: 768px) {
-    padding: 20px 40px;
+    padding: 0 30px 0px 10px;
+    grid-gap: 1em;
   }
 
   @media only screen and (max-width: 531px) {
@@ -61,7 +51,6 @@ const Wrapper = styled.div`
 export const Website = styled.div`
   cursor: pointer;
   transition: all 0.3s ease;
-  // background: red;
   margin: 40px auto;
 
   &:hover {
@@ -94,8 +83,12 @@ export const WebsiteTitle = styled.h3`
     color: rgb(0, 123, 165);
   }
 
-  @media only screen and (max-width: 800px) {
-    font-size: 18px;
+  @media only screen and (max-width: 1024px) {
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 22px;
   }
 `;
 
@@ -114,7 +107,6 @@ export const ImageScreenshot = styled.div`
     }
 
     @media only screen and (max-width: 810px) {
-      height: 250px;
 
     }
   }
@@ -154,7 +146,7 @@ const featuredWebsites = ({ posts }) => {
 
                     <ImageScreenshot>
                       <img
-                        width="80%"
+                        width="100%"
                         height="100%"
                         className="website-screenshot"
                         src={urlFor(post.websiteImg)}

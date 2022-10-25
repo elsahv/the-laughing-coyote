@@ -15,11 +15,15 @@ const Wrapper = styled.div`
   // background: maroon;
 
   @media only screen and (max-width: 1024px) {
-    // margin-left: 250px;
+    margin-left: 470px;
   }
 
   @media only screen and (max-width: 834px) {
-    margin-left: 325px;
+    margin-left: 370px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-left: 320px;
   }
 
   @media only screen and (max-width: 600px) {
