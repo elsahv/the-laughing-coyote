@@ -28,7 +28,7 @@ export const PageTitle = styled.h2`
 
 const Wrapper = styled.div`
   // background: green;
-  padding: 0 70px 0 10px;
+  padding: 0 70px 0 50px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 4em;
