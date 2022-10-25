@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   overflow-y: scroll;
   height: 100%;
   position: absolute;
-  top: 0;
+  right: 0;
   z-index: 700;
   // background: maroon;
 
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 834px) {
-    margin-left: 370px;
+    margin-left: 350px;
   }
 
   @media only screen and (max-width: 768px) {

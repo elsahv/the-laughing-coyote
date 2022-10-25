@@ -15,6 +15,7 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: start;
       align-items: center;
+      z-index: 10000;
     }
   }
 
