@@ -18,7 +18,7 @@ export const Title = styled.h2`
   margin-top: 55px;
   margin-left: 255px;
   padding: 30px 40px 30px 300px;
-  background: teal;
+  background: #3aa1aa;
   color: #fff;
   text-shadow: 1px 1px 1px rgb(0, 123, 165);
   text-align: right;
