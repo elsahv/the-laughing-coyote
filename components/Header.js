@@ -138,7 +138,7 @@ const Header = () => {
               <Link href="/#services">Services</Link>
               <Link href="/featured-websites">Featured Websites</Link>
               <Link href="/contact/#about">Contact</Link>
-              <Link href="/newsletter/#subscribe">Newsletter</Link>
+              {/* <Link href="/newsletter/#subscribe">Newsletter</Link> */}
             </NavLinks>
           </MenuItems>
 

@@ -30,18 +30,18 @@ const Wrapper = styled.div`
 
 const Logo = styled.div`
   font-size: 45px;
-  padding: 25px;
+  // padding-left: 20px;
 
-  @media only screen and (max-width: 834px) {
-    padding-left: 60px;
+  @media only screen and (max-width: 1024px) {
+    // padding-left: 60px;
     padding-top: 65px;
     font-size: 35px;
   }
 `;
 
 const BlogWrapper = styled.div`
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  // padding-bottom: 25px;
   border-top: solid 2px gray;
   @media only screen and (max-width: 1024px) {
     margin: auto;

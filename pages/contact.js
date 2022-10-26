@@ -59,7 +59,6 @@ const contact = () => {
         <AboutFooter id="about-mobile">
           <About />
         </AboutFooter>
-        {/* <ContactSection /> */}
       </motion.div>
     </>
   );

@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const SubscribeContainer = styled.form`
   width: 100%;
   padding: 10px 10px 10px 20px;
-  background: orange;
+  // background: orange;
 
   @media (max-width: 600px) {
     margin-left: 170px;

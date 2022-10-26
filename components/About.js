@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import SubscribeSection from "../components/SubscribeSection";
+// import SubscribeSection from "../components/SubscribeSection";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
@@ -165,7 +165,7 @@ const about = () => {
                 - My curiosity is what keeps me going, along with the desire to
                 help other people with their endeavors.
               </Paragraph>
-              <SubscribeSection />
+              {/* <SubscribeSection /> */}
             </AboutContent>
           </Grid>
         </Wrapper>
