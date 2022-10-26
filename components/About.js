@@ -8,14 +8,6 @@ export const Wrapper = styled.div`
   background: #fff;
   display: flex;
   justify-content: center;
-
-  @media only screen and (max-width: 600px) {
-    // background: pink;
-  }
-
-  @media only screen and (max-width: 531px) {
-    // background: lightgreen;
-  }
 `;
 
 export const Grid = styled.div`
@@ -73,7 +65,7 @@ export const AboutContent = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding-top: 0;
+    padding-bottom: 500px;
     padding-left: 25px;
     padding-top: 25px;
     p {

@@ -44,7 +44,7 @@ export const Menu = styled.div`
   width: 100%;
 
   @media only screen and (max-width: 834px) {
-    padding-left: 15px;
+    padding-left: 0px;
   }
 `;
 
@@ -117,6 +117,13 @@ export const AboutImgWrapper = styled.div`
   }
 
   @media only screen and (max-width: 834px) {
+    padding-top: 575px;
+  }
+  @media only screen and (max-width: 810px) {
+    padding-top: 395px;
+  }
+
+  @media only screen and (max-width: 800px) {
     padding-top: 595px;
   }
 `;
@@ -138,7 +145,7 @@ const Header = () => {
               <Link href="/#services">Services</Link>
               <Link href="/featured-websites">Featured Websites</Link>
               <Link href="/contact/#about">Contact</Link>
-              {/* <Link href="/newsletter/#subscribe">Newsletter</Link> */}
+              {/* <Link href="/newsletter/#subscribe">Newsletter</Link>  */}
             </NavLinks>
           </MenuItems>
 
