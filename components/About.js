@@ -48,8 +48,6 @@ export const ImageWrapper = styled.div`
   }
 
   @media only screen and (max-width: 531px) {
-    // left: 50%;
-    // transform: translateX(-50%);
     margin-left: 410px;
   }
 
@@ -57,14 +55,13 @@ export const ImageWrapper = styled.div`
     margin-left: 430px;
   }
 
-  @media only screen and (max-width: 384px) {
-    margin-left: 450px;
+  @media only screen and (max-width: 390px) {
+    margin-left: 470px;
   }
 `;
 
 export const AboutContent = styled.div`
   grid-area: b;
-  // opacity: 0.8;
   a {
     color: rgb(0, 123, 165);
     margin: 5px;
@@ -109,8 +106,12 @@ export const AboutTitle = styled.h4`
   @media only screen and (max-width: 531px) {
     padding: 0 0 10px 380px;
   }
-  @media only screen and (max-width: 400px) {
-    padding: 0 0 10px 440px;
+  @media only screen and (max-width: 412px) {
+    padding: 0 0 10px 410px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding: 0 0 10px 460px;
   }
 `;
 export const Paragraph = styled.p`
@@ -124,11 +125,15 @@ export const Paragraph = styled.p`
   }
 
   @media only screen and (max-width: 531px) {
-    padding: 0 0 0 380px;
+    padding: 0 0 0 400px;
   }
 
   @media only screen and (max-width: 400px) {
     padding: 0 0 10px 440px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    padding: 0 0 10px 460px;
   }
 `;
 

@@ -5,6 +5,14 @@ import styled from "styled-components";
 export const SubscribeContainer = styled.form`
   width: 100%;
   padding: 10px 10px 10px 20px;
+  background: orange;
+
+  @media (max-width: 600px) {
+    margin-left: 170px;
+  }
+  @media (max-width: 412px) {
+    margin-left: 400px;
+  }
 `;
 
 export const SubFormContainer = styled.div`
@@ -12,11 +20,6 @@ export const SubFormContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-
-  @media (max-width: 600px) {
-    width: 100%;
-    display: block;
-  }
 `;
 
 export const Input = styled.input`
@@ -30,6 +33,7 @@ export const Input = styled.input`
   }
 
   @media (max-width: 531px) {
+    // padding: 8px 20px 8px 10px;
   }
 `;
 

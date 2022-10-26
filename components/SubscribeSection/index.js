@@ -25,17 +25,24 @@ const MailchimpWrapper = styled.div`
     grid-template-areas:
       "a"
       "b";
+    // background: orange;
   }
 `;
 
 const ContentParagraph = styled.p`
   font-size: 18px;
   padding: 0px 30px 5px;
+  background: pink;
 
-  @media only screen and (max-width: 531px) {
+  @media only screen and (max-width: 600px) {
     font-size: 17px;
     padding-top: 10px;
     padding-bottom: 0;
+    margin-left: 170px;
+  }
+
+  @media (max-width: 412px) {
+    margin-left: 420px;
   }
 `;
 
