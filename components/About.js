@@ -54,6 +54,8 @@ export const ImageWrapper = styled.div`
 
 export const AboutContent = styled.div`
   grid-area: b;
+  padding-bottom: 500px;
+
   a {
     color: rgb(0, 123, 165);
     margin: 5px;
@@ -65,7 +67,6 @@ export const AboutContent = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding-bottom: 500px;
     padding-left: 25px;
     padding-top: 25px;
     p {
