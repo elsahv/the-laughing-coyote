@@ -67,7 +67,7 @@ export const Logo = styled.h1`
   }
 
   @media only screen and (max-width: 834px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 `;
 
@@ -78,6 +78,9 @@ export const PageID = styled.h2`
     color: #fff;
     text-decoration: none;
     text-shadow: 1px 1px 1px #000;
+  }
+  @media only screen and (max-width: 834px) {
+    font-size: 28px;
   }
 `;
 

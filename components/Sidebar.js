@@ -11,11 +11,13 @@ const Wrapper = styled.div`
     @media only screen and (max-width: 600px) {
       background-color: teal;
       border-bottom: solid 2px black;
-      height: 80px;
+      height: 110px;
       display: flex;
       justify-content: start;
       align-items: center;
-      z-index: 10000;
+    }
+    @media only screen and (max-width: 531px) {
+      height: 80px;
     }
   }
 
@@ -88,14 +90,17 @@ const Wrapper = styled.div`
 `;
 
 const SidebarLogo = styled.div`
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   display: flex;
   justify-content: center;
   padding: 25px;
-  // background: red;
   width: 100%;
+
+  @media only screen and (max-width: 531px) {
+    font-size: 20px;
+  }
 `;
 
 function Navbar() {

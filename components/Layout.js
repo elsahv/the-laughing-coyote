@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    margin: 0px;
+    margin: 0;
   }
 `;
 

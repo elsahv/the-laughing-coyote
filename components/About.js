@@ -10,7 +10,11 @@ export const Wrapper = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    padding: 0 0 0 80px;
+    // background: pink;
+  }
+
+  @media only screen and (max-width: 531px) {
+    // background: lightgreen;
   }
 `;
 
@@ -39,7 +43,22 @@ export const ImageWrapper = styled.div`
   @media only screen and (max-width: 600px) {
     left: 50%;
     transform: translateX(-50%);
-    margin-left: 20px;
+    margin-left: 240px;
+    margin-top: 100px;
+  }
+
+  @media only screen and (max-width: 531px) {
+    // left: 50%;
+    // transform: translateX(-50%);
+    margin-left: 410px;
+  }
+
+  @media only screen and (max-width: 412px) {
+    margin-left: 430px;
+  }
+
+  @media only screen and (max-width: 384px) {
+    margin-left: 450px;
   }
 `;
 
@@ -66,8 +85,11 @@ export const AboutContent = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    padding-left: 155px;
     font-size: 16px;
+    // background: orange;
+    margin-left: 400px;
+    padding-left: 195px;
+    padding-right: 15px;
   }
   @media only screen and (max-width: 390px) {
     padding-left: 175px;
@@ -79,12 +101,35 @@ export const AboutTitle = styled.h4`
   padding: 20px 0;
   text-decoration: underline;
   text-align: center;
+  @media only screen and (max-width: 600px) {
+    // background: green;
+    padding-left: 200px;
+    text-align: left;
+  }
+  @media only screen and (max-width: 531px) {
+    padding: 0 0 10px 380px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0 0 10px 440px;
+  }
 `;
 export const Paragraph = styled.p`
   padding: 10px 25px;
   margin-bottom: 25px;
   font-size: 18px;
   line-height: 1.5;
+
+  @media only screen and (max-width: 600px) {
+    padding: 0 0 0 200px;
+  }
+
+  @media only screen and (max-width: 531px) {
+    padding: 0 0 0 380px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 0 0 10px 440px;
+  }
 `;
 
 const about = () => {

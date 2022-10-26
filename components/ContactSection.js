@@ -5,7 +5,6 @@ export const ContentWrapper = styled.div`
   text-align: right;
   padding: 10px 20px;
   width: 1350px;
-  // height: 400px;
   margin-right: 10px;
 
   p {
@@ -14,7 +13,7 @@ export const ContentWrapper = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    padding: 20px 15px;
+    padding: 0 15px;
   }
 `;
 
@@ -22,13 +21,10 @@ export const CTA = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 20px;
+  // background: pink;
   padding-left: 10px;
-
   a {
     font-size: 25px;
-    // font-weight: bold;
-    // margin: 20px 10px;
     color: #000;
     text-decoration: underline;
   }

@@ -18,18 +18,25 @@ export const Title = styled.h2`
   margin-top: 55px;
   margin-left: 255px;
   padding: 30px 40px 30px 300px;
-  background: #3aa1aa;
+  background: teal;
   color: #fff;
   text-shadow: 1px 1px 1px rgb(0, 123, 165);
   text-align: right;
 
   @media only screen and (max-width: 1024px) {
-    font-size: 35px;
-    margin: 100px 0 0 100px;
+    margin: auto;
+    padding-top: 100px;
   }
 
-  @media only screen and (max-width: 834px) {
-    // font-size: 35px;
+  @media only screen and (max-width: 600px) {
+    font-size: 35px;
+    background: none;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-right: 20px;
+    color: #000;
+    text-shadow: none;
   }
 `;
 
@@ -47,11 +54,12 @@ const contact = () => {
         transition={{ delay: 0.3, duration: 0.5 }}
       >
         <Title>Contact</Title>
+        <ContactSection />
 
         <AboutFooter id="about-mobile">
           <About />
         </AboutFooter>
-        <ContactSection />
+        {/* <ContactSection /> */}
       </motion.div>
     </>
   );
