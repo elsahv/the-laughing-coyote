@@ -14,6 +14,7 @@ export const Intro = styled.div`
   h4 {
     font-size: 30px;
     color: #000;
+    padding-bottom: 10px;
   }
   p {
     font-size: 22px;
@@ -188,8 +189,8 @@ const featuredWebsites = ({ posts }) => {
             Im a web developer based in Joshua Tree, CA. I create niche websites
             and solutions for small business owners and creatives.{" "}
           </p>
-          <br />
-          <p>
+          {/* <br /> */}
+          <p style={{ paddingTop: "8px", fontSize: "21px" }}>
             Listed below are some of my featured websites, feel free to look
             around!
           </p>
