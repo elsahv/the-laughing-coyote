@@ -75,7 +75,7 @@ export const Wrapper = styled.div`
   opacity: 0.8;
 
   h3 {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -91,14 +91,21 @@ export const Wrapper = styled.div`
   }
 
   @media only screen and (max-width: 1024px) {
+    // background: red;
     text-align: left;
     padding: 10px 25px;
-    margin-top: 40px;
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 0px;
 
     h3 {
       margin-top: 35px;
     }
+
+    ul {
+      // background: green;
+      margin: 0;
+    }
+
     li {
       font-size: 17px;
       padding: 10px 0 0 20px;
@@ -139,7 +146,7 @@ export const SkillsTitle = styled.h2`
 
   @media only screen and (max-width: 1024px) {
     font-size: 25px;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-left: 20px;
     text-align: left;
   }
