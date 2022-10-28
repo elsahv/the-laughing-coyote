@@ -142,10 +142,9 @@ const Header = () => {
               <Link href="/">Development/ Design</Link>
             </PageID>
             <NavLinks>
-              <Link href="/#services">Services</Link>
-              <Link href="/featured-websites">Featured Websites</Link>
+              <Link href="/">Featured Websites</Link>
+              <Link href="/services">Services</Link>
               <Link href="/contact/#about">Contact</Link>
-              {/* <Link href="/newsletter/#subscribe">Newsletter</Link>  */}
             </NavLinks>
           </MenuItems>
 
