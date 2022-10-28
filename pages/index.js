@@ -149,6 +149,7 @@ export const WebsiteDescription = styled.span`
 export const ImageScreenshot = styled.div`
   .website-screenshot {
     border: solid 2px black;
+    border-radius: 5px;
 
     @media only screen and (max-width: 1024px) {
       height: 300px;

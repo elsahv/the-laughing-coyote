@@ -7,27 +7,31 @@ import styled from "styled-components";
 
 export const ToolsTitle = styled.h3`
   font-weight: bold;
-  padding-left: 25px;
+  padding-left: 10px;
   padding-top: 40px;
   text-decoration: underline;
-  font-size: 35px;
   text-align: left;
+  opacity: 0.8;
+  font-size: 30px;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 25px;
+    padding-left: 60px;
+    padding-bottom: 20px;
+  }
 `;
 
 export const Tools = styled.div`
-  // background: teal;
-  padding: 20px 0;
-  // border: 1px solid #000;
+  padding: 20px 10px;
   display: flex;
   width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  opacity: 0.9;
+  // background: orange;
 
   @media only screen and (max-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    padding: 0 50px;
   }
 `;
 
@@ -39,16 +43,29 @@ export const Icon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  border-radius: 5px;
+
+  @media only screen and (max-width: 1024px) {
+    padding: 1px;
+    // margin: 0 2px;
+
+    .tool-png {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `;
 
 export const IconName = styled.h4`
-  margin: 0 15px;
-  padding: 5px 0;
-  font-size: 12px;
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 15px;
   color: #000;
-  // color: #fff;
-  // text-shadow: 1px 1px 1px rgb(0, 123, 165);
+  text-align: center;
+  opacity: 0.7;
+  @media only screen and (max-width: 1024px) {
+    font-size: 12px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -117,11 +134,11 @@ export const SkillsTitle = styled.h2`
   padding-right: 25px;
   padding-top: 20px;
   text-decoration: underline;
-  font-size: 35px;
+  font-size: 30px;
   text-align: right;
 
   @media only screen and (max-width: 1024px) {
-    font-size: 32px;
+    font-size: 25px;
     padding-top: 60px;
     padding-left: 20px;
     text-align: left;
@@ -148,15 +165,15 @@ const services = ({ posts }) => {
           posts.map((post, index) => (
             <span key={index}>
               <Icon>
-                <IconName>{post.name}</IconName>
                 <img
                   width="80px"
                   height="80px"
-                  className="website-screenshot"
+                  className="tool-png"
                   src={urlFor(post.icon)}
                   alt=""
                 />
               </Icon>
+              <IconName>{post.name}</IconName>
             </span>
           ))}
       </Tools>
