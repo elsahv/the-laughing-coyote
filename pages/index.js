@@ -183,14 +183,15 @@ const featuredWebsites = ({ posts }) => {
         <Intro>
           <h4>
             Hi there,
-            <Link href="/#about">Im Elsa.</Link>
+            {"I'm"}
+            <Link href="/#about">Elsa.</Link>
           </h4>
           <p>
             Im a web developer based in Joshua Tree, CA. I create niche websites
             and solutions for small business owners and creatives.{" "}
           </p>
           {/* <br /> */}
-          <p style={{ paddingTop: "8px", fontSize: "21px" }}>
+          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
             Listed below are some of my featured websites, feel free to look
             around!
           </p>
