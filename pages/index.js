@@ -15,6 +15,7 @@ export const Intro = styled.div`
     font-size: 30px;
     color: #000;
     padding-bottom: 10px;
+    display: flex;
   }
   p {
     font-size: 22px;
@@ -23,7 +24,7 @@ export const Intro = styled.div`
   a {
     color: #000;
     text-decoration: underline;
-    margin: 5px;
+    margin: 0 8px;
   }
   a:hover {
     color: aquamarine;
@@ -183,7 +184,7 @@ const featuredWebsites = ({ posts }) => {
         <Intro>
           <h4>
             Hi there,
-            {"I'm"}
+            <div style={{ marginLeft: "5px" }}>{"I'm"}</div>
             <Link href="/#about">Elsa.</Link>
           </h4>
           <p>
