@@ -193,7 +193,7 @@ const featuredWebsites = ({ posts }) => {
           </p>
           {/* <br /> */}
           <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-            Listed below are some of my featured websites, feel free to look
+            Listed below are some of my featured websites... feel free to look
             around!
           </p>
         </Intro>
