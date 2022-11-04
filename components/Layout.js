@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
 import MobileFooter from "./MobileFooter";
+import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
   margin-left: 550px;
@@ -36,7 +37,13 @@ export default function Layout({ children }) {
     <>
       <GlobalStyles />
       <Sidebar />
-      <Header />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <Header />
+      </motion.div>
 
       <Wrapper>
         <main>{children}</main>
