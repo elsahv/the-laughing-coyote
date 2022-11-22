@@ -1,174 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Link from "next/link";
+import Intro from "../components/Intro";
 import { sanityClient, urlFor } from "../client";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import JtPic from "../public/images/joshuatreeabout.jpg";
+import Image from "next/image";
 
-export const Intro = styled.div`
-  opacity: 0.8;
-  background: teal;
-  padding: 35px;
-  grid-area: rs;
-  margin-top: 40px;
-  h4 {
-    font-size: 30px;
-    color: #000;
-    padding-bottom: 10px;
-    display: flex;
-  }
-  p {
-    font-size: 22px;
-    color: #000;
-  }
-  a {
-    color: #000;
-    text-decoration: underline;
-    margin: 0 8px;
-  }
-  a:hover {
-    color: aquamarine;
-    transition: 2s;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    h4 {
-      font-size: 27px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-
-  @media only screen and (max-width: 834px) {
-    margin-left: 40px;
-    margin-top: 50px;
-  }
-  @media only screen and (max-width: 768px) {
-    margin-left: 10px;
-    // margin-top: 50px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    margin-top: 40px;
-  }
-`;
-
-export const PageTitle = styled.h2`
-  width: 100%;
-  padding: 70px 80px 50px;
-  margin-bottom: 30px;
-  font-size: 30px;
-  text-align: left;
-  opacity: 0.8;
-  background: teal;
-  color: #000;
-  text-shadow: 1px 1px 1px rgb(0, 123, 165);
-
-  @media only screen and (max-width: 1024px) {
-    padding-left: 35px;
-    margin-bottom: 20px;
-  }
-  @media only screen and (max-width: 600px) {
-    font-size: 20px;
-    padding: 30px;
-    margin-right: 20px;
-  }
-`;
-
-const Wrapper = styled.div`
-  // background: green;
-  padding: 20px 70px 0 50px;
+const Grid = styled.div`
+  padding: 70px 40px;
+  // background: pink;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 4em;
-  a {
-    color: #000;
-    text-decoration: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "a b"
+    "c d";
+  grid-gap: 1em;
+  #sq {
+    background: teal;
+    padding: 20px;
   }
 
   @media only screen and (max-width: 1024px) {
-    padding: 0 30px 0px 10px;
-    grid-gap: 1em;
-  }
-
-  @media only screen and (max-width: 531px) {
-    padding: 20px 0;
-    margin: 30px 10px;
-  }
-`;
-
-export const Website = styled.div`
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 40px auto;
-
-  &:hover {
-    opacity: 0.8;
-  }
-  a {
-    color: #000;
+    padding: 30px 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
   }
 
   @media only screen and (max-width: 834px) {
-    margin-right: 25px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    margin-right: 15px;
-  }
-`;
-export const TopContent = styled.div`
-  // background: teal;
-  padding: 10px 10px 15px;
-`;
-
-export const WebsiteTitle = styled.h3`
-  font-size: 30px;
-  color: #000;
-  padding: 3px 0;
-
-  &:hover {
-    transition: 1s;
-    color: rgb(0, 123, 165);
-  }
-
-  @media only screen and (max-width: 1024px) {
-    font-size: 25px;
-  }
-
-  @media only screen and (max-width: 1024px) {
-    font-size: 22px;
+    padding: 30px 30px;
   }
 `;
 
-export const WebsiteDescription = styled.span`
-  font-size: 20px;
-  text-align: center;
-  color: #000;
+const Sq1 = styled.div`
+  grid-area: a;
+  background: color: yellow;
 `;
+const Sq2 = styled.div`
+  grid-area: b;
+  background: color: pink;
 
-export const ImageScreenshot = styled.div`
-  .website-screenshot {
-    border: solid 2px black;
-    border-radius: 5px;
+`;
+const Sq3 = styled.div`
+  grid-area: c;
+  background: color: teal;
 
-    @media only screen and (max-width: 1024px) {
-      height: 300px;
-    }
-
-    @media only screen and (max-width: 810px) {
-
-    }
+`;
+const Sq4 = styled.div`
+  grid-area: d;
+  background: color: green;
+  li {
+    margin: 10px 10px;
   }
-  }
 `;
 
-export const LeftSection = styled.div`
-  grid-area: left;
-`;
-
-const featuredWebsites = ({ posts }) => {
+const Home = ({ posts }) => {
   return (
     <>
       <Head>
@@ -181,71 +72,71 @@ const featuredWebsites = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Intro>
-          <h4>
-            Hi there,
-            <div style={{ marginLeft: "5px" }}>{"I'm"}</div>
-            <Link href="/#about">Elsa.</Link>
-          </h4>
-          <p>
-            Im a web developer based in Joshua Tree, CA. I create niche websites
-            and solutions for small business owners and creatives.{" "}
-          </p>
-          {/* <br /> */}
-          <p style={{ paddingTop: "8px", fontSize: "22px" }}>
-            Listed below are some of my featured websites... feel free to look
-            around!
-          </p>
-        </Intro>
-
-        <Wrapper>
-          {posts &&
-            posts.map((post, index) => (
-              <span key={index}>
-                <a target="_blank" href={post.projectLink} rel="noreferrer">
-                  <Website>
-                    <TopContent>
-                      <WebsiteTitle>{post.websiteTitle}</WebsiteTitle>
-                      <WebsiteDescription>
-                        -{post.description}
-                      </WebsiteDescription>
-                    </TopContent>
-
-                    <ImageScreenshot>
-                      <img
-                        width="100%"
-                        height="100%"
-                        className="website-screenshot"
-                        src={urlFor(post.websiteImg)}
-                        alt=""
-                      />
-                    </ImageScreenshot>
-                  </Website>
-                </a>
-              </span>
-            ))}
-        </Wrapper>
+        <Intro />
+        On Finding Creativity through... latest
+        <Grid id="on-finding-creativity">
+          <Sq1 id="sq">
+            <h2>Working with clients</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li>ex- Dads site</li>
+              <li>ex- Rosys site</li>
+              <li>interview small businesses</li>
+            </ul>
+          </Sq1>
+          <Sq2 id="sq">
+            <h2>Designing my own Projects</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li>Writing to Better Health</li>
+              <li>The Indoor Jungle Project</li>
+              <li>The Running Quail</li>
+            </ul>
+          </Sq2>
+          <Sq3 id="sq">
+            <h2>Programming and CSS</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <li>small projects</li>
+            <li>learning frameworks, programming</li>
+            <li>learning algorithms</li>
+          </Sq3>
+          <Sq4 id="sq">
+            <h2>Content Writing- life projects at home, JT</h2>
+            <Image
+              className="portfolio-img"
+              src={JtPic}
+              alt="elsa hovey"
+              width="350px"
+              height="200px"
+            />
+            <ul>
+              <li>Blog about JT</li>
+              <li>polymer clay</li>
+              <li>learning drawing/ digital art</li>
+            </ul>
+          </Sq4>
+        </Grid>
       </motion.div>
     </>
   );
 };
 
-export default featuredWebsites;
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "websites"]';
-  const posts = await sanityClient.fetch(query);
-  if (!posts.length) {
-    return {
-      props: {
-        posts: [],
-      },
-    };
-  } else {
-    return {
-      props: {
-        posts,
-      },
-    };
-  }
-};
+export default Home;

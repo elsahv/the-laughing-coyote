@@ -141,7 +141,8 @@ const Header = () => {
               <Link href="/">Development/ Design</Link>
             </PageID>
             <NavLinks>
-              <Link href="/">Featured Websites</Link>
+              <Link href="/on-finding-creativity">On Finding Creativity</Link>
+              <Link href="/works">Works</Link>
               <Link href="/services">Services</Link>
               <Link href="/contact/#about">Contact</Link>
             </NavLinks>
