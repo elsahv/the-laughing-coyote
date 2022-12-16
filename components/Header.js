@@ -1,7 +1,6 @@
-import { FaBars } from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
-import About from "../components/About";
+import { FaBars } from "react-icons/fa";
+
 import {
   NavSection,
   Menu,
@@ -13,25 +12,23 @@ import {
 const Header = () => {
   return (
     <>
-      <NavSection>
-        <Menu>
-          <FaBars />
-          <MenuItems>
-            <Logo>
-              <Link href="/">The Laughing Coyote</Link>
-            </Logo>
-            <NavLinks>
-              <Link href="/">About</Link>
-              <Link href="/">list item</Link>
-              <Link href="/">list item</Link>
-              <Link href="/">list item</Link>
-              <Link href="/contact/#about">Contact</Link>
-            </NavLinks>
-          </MenuItems>
-
-          <About />
-        </Menu>
-      </NavSection>
+      {/* <NavSection> */}
+      {/* <Menu> */}
+      <FaBars />
+      <MenuItems>
+        <Logo>
+          <Link href="/">The Laughing Coyote</Link>
+        </Logo>
+        <NavLinks>
+          {/* <Link href="/">Purpose</Link> */}
+          <Link href="/">About</Link>
+          <Link href="/">Process</Link>
+          <Link href="/">Newsletter</Link>
+          <Link href="/">Contact</Link>
+        </NavLinks>
+      </MenuItems>
+      {/* </Menu> */}
+      {/* </NavSection> */}
     </>
   );
 };

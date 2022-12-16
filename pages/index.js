@@ -19,34 +19,19 @@ const Home = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       ></motion.div>
-      <h1>The RQ Home</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
-        aliquid officia inventore in adipisci molestiae dignissimos saepe optio
-        provident quaerat, distinctio ipsum sequi, similique quidem laudantium
-        assumenda nam, dolore voluptates. Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Molestias aliquid officia inventore in
-        adipisci molestiae dignissimos saepe optio provident quaerat, distinctio
-        ipsum sequi, similique quidem laudantium assumenda nam, dolore
-        voluptates.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
-        aliquid officia inventore in adipisci molestiae dignissimos saepe optio
-        provident quaerat, distinctio ipsum sequi, similique quidem laudantium
-        assumenda nam, dolore voluptates. Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Molestias aliquid officia inventore in
-        adipisci molestiae dignissimos saepe optio provident quaerat, distinctio
-        ipsum sequi, similique quidem laudantium assumenda nam, dolore
-        voluptates. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Molestias aliquid officia inventore in adipisci molestiae dignissimos
-        saepe optio provident quaerat, distinctio ipsum sequi, similique quidem
-        laudantium assumenda nam, dolore voluptates. Lorem, ipsum dolor sit amet
-        consectetur adipisicing elit. Molestias aliquid officia inventore in
-        adipisci molestiae dignissimos saepe optio provident quaerat, distinctio
-        ipsum sequi, similique quidem laudantium assumenda nam, dolore
-        voluptates.
-      </p>
+      <div>
+        <h2>Info</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique
+        itaque quam impedit assumenda, ipsa porro beatae. Natus veritatis
+        facilis fugiat saepe, quisquam maxime impedit iure voluptatibus
+        consequuntur, molestias unde.
+      </div>
+      <ul>
+        <li>Services Includes</li>
+        <li>Package Rate</li>
+        <li>Page Options</li>
+        <li></li>
+      </ul>
     </>
   );
 };

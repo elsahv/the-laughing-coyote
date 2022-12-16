@@ -4,7 +4,7 @@ import styled from "styled-components";
 import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 export const Wrapper = styled.div`
-  background: #fff;
+  // background: pink;
   display: flex;
   justify-content: center;
 `;

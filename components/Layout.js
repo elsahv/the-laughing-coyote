@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import GlobalStyles from "./Global";
 import Sidebar from "./Sidebar";
-import Header from "./Header";
+import LeftSideSection from "./LeftSideSection";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
@@ -44,13 +44,11 @@ export default function Layout({ children }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Header />
+        <LeftSideSection />
       </motion.div>
-
       <Wrapper>
         <main>{children}</main>
       </Wrapper>
-
       <Footer />
     </>
   );
