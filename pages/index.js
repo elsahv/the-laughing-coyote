@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import { sanityClient, urlFor } from "../client";
-import styled from "styled-components";
+import HomePageHero from "../components/HomePageHero";
 import { motion } from "framer-motion";
-import JtPic from "../public/images/joshuatreeabout.jpg";
-import Image from "next/image";
+import ServicesIncludes from "../components/ServicesIncludes";
+import PkgRate from "../components/PkgRate";
+import PgOptions from "../components/PgOptions";
 
 const Home = ({ posts }) => {
   return (
@@ -20,17 +20,12 @@ const Home = ({ posts }) => {
         transition={{ delay: 0.3, duration: 0.5 }}
       ></motion.div>
       <div>
-        <h2>Info</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique
-        itaque quam impedit assumenda, ipsa porro beatae. Natus veritatis
-        facilis fugiat saepe, quisquam maxime impedit iure voluptatibus
-        consequuntur, molestias unde.
+        <HomePageHero />
       </div>
       <ul>
-        <li>Services Includes</li>
-        <li>Package Rate</li>
-        <li>Page Options</li>
-        <li></li>
+        <ServicesIncludes />
+        <PkgRate />
+        <PgOptions />
       </ul>
     </>
   );
