@@ -7,7 +7,10 @@ import MobileFooter from "./MobileFooter";
 import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
-  margin-left: 550px;
+  background: #333232;
+  color: #fff;
+  margin-left: 830px;
+  padding: 15px 30px;
   overflow-y: scroll;
   height: 100%;
   position: absolute;
@@ -49,7 +52,7 @@ export default function Layout({ children }) {
         <main>{children}</main>
       </Wrapper>
 
-      {/* <Footer /> */}
+      <Footer />
       {/* <MobileFooter /> */}
     </>
   );

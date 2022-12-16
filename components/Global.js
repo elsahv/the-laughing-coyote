@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-family: 'Cormorant Garamond', serif;
     scroll-behavior: smooth;
+    
   }
 
   html {
