@@ -1,9 +1,4 @@
-import styled from "styled-components";
-
-const Section = styled.section`
-  height: 100vh;
-  background: teal;
-`;
+import { Section } from "../styles/WebDevSections.styled";
 
 const PgOptions = () => {
   return (

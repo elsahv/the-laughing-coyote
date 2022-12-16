@@ -1,11 +1,8 @@
 import Image from "next/image";
-import Header from "./Header";
-import HomePageHero from "./HomePageHero";
-import { motion } from "framer-motion";
+import Hero from "./Hero";
 import ServicesIncludes from "./ServicesIncludes";
 import PkgRate from "./PkgRate";
 import PgOptions from "./PgOptions";
-import About from "./About";
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
@@ -56,8 +53,7 @@ const LeftSideSection = () => {
   return (
     <Wrapper>
       <LeftSideContent>
-        <About />
-        <HomePageHero />
+        <Hero />
         <ServicesIncludes />
         <PkgRate />
         <PgOptions />

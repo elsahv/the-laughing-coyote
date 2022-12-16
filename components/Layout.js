@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import WebDevSection from "./WebDevSection";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
+import Header from "./Header";
 
 const Wrapper = styled.div`
   background: #fff;
@@ -46,12 +47,13 @@ export default function Layout({ children }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-      >
-        <WebDevSection />
-      </motion.div>
+      ></motion.div>
       <Wrapper>
+        <Header />
         <main>{children}</main>
       </Wrapper>
+      <WebDevSection />
+
       <Footer />
     </>
   );

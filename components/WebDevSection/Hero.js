@@ -1,10 +1,4 @@
-import styled from "styled-components";
-
-const Section = styled.section`
-  height: 100vh;
-  background: pink;
-  padding: 100px;
-`;
+import { Section } from "../styles/WebDevSections.styled";
 
 const HomePageHero = () => {
   return (

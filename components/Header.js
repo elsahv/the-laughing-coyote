@@ -23,8 +23,8 @@ const Header = () => {
           {/* <Link href="/">Purpose</Link> */}
           <Link href="/#about">About</Link>
           <Link href="/#process">Process</Link>
-          <Link href="/newsletter#newsletter-sidebar">Newsletter</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/#newsletter">Newsletter</Link>
+          <Link href="/#contact">Contact</Link>
         </NavLinks>
       </MenuItems>
       {/* </Menu> */}

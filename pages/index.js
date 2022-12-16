@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { motion } from "framer-motion";
-import Contact from "../components/Contact";
 import Header from "../components/Header";
+import { Section } from "../components/styles/WebDevSections.styled";
 
 const Home = ({ posts }) => {
   return (
@@ -17,9 +17,29 @@ const Home = ({ posts }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <Header />
+        <div id="about">
+          <Section>
+            <h2>About</h2>
+          </Section>
+        </div>
 
-        <Contact />
+        <div id="process">
+          <Section>
+            <h2>Process</h2>
+          </Section>
+        </div>
+
+        <div id="newsletter">
+          <Section>
+            <h2>Newsletter</h2>
+          </Section>
+        </div>
+
+        <div id="contact">
+          <Section>
+            <h2>Contact</h2>
+          </Section>
+        </div>
       </motion.div>
     </>
   );
