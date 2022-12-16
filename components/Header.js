@@ -21,10 +21,10 @@ const Header = () => {
         </Logo>
         <NavLinks>
           {/* <Link href="/">Purpose</Link> */}
-          <Link href="/">About</Link>
-          <Link href="/">Process</Link>
-          <Link href="/">Newsletter</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/#about">About</Link>
+          <Link href="/#process">Process</Link>
+          <Link href="/newsletter#newsletter-sidebar">Newsletter</Link>
+          <Link href="/contact">Contact</Link>
         </NavLinks>
       </MenuItems>
       {/* </Menu> */}

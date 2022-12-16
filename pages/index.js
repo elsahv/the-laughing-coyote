@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import HomePageHero from "../components/HomePageHero";
 import { motion } from "framer-motion";
-import ServicesIncludes from "../components/ServicesIncludes";
-import PkgRate from "../components/PkgRate";
-import PgOptions from "../components/PgOptions";
+import Contact from "../components/Contact";
+import Header from "../components/Header";
 
 const Home = ({ posts }) => {
   return (
@@ -18,15 +16,11 @@ const Home = ({ posts }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
-      ></motion.div>
-      <div>
-        <HomePageHero />
-      </div>
-      <ul>
-        <ServicesIncludes />
-        <PkgRate />
-        <PgOptions />
-      </ul>
+      >
+        <Header />
+
+        <Contact />
+      </motion.div>
     </>
   );
 };

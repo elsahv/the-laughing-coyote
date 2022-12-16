@@ -1,7 +1,12 @@
-import React from "react";
+import styled from "styled-components";
+
+const Section = styled.section`
+  height: 100vh;
+  background: orange;
+`;
 
 const PkgRate = () => {
-  return <div>PkgRate</div>;
+  return <Section>PkgRate</Section>;
 };
 
 export default PkgRate;

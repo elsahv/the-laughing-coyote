@@ -1,20 +1,23 @@
 import styled from "styled-components";
 import GlobalStyles from "./Global";
 import Sidebar from "./Sidebar";
-import LeftSideSection from "./LeftSideSection";
+import WebDevSection from "./WebDevSection";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 
 const Wrapper = styled.div`
-  background: #333232;
-  color: #fff;
-  margin-left: 830px;
+  background: #fff;
+  color: #000;
+  border-right: solid 2px #000;
+  // margin-left: 830px;
   padding: 15px 30px;
   overflow-y: scroll;
   height: 100%;
+  width: 45%;
   position: absolute;
-  right: 0;
+  left: 0;
   z-index: 700;
+
   // background: maroon;
 
   @media only screen and (max-width: 1024px) {
@@ -44,7 +47,7 @@ export default function Layout({ children }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <LeftSideSection />
+        <WebDevSection />
       </motion.div>
       <Wrapper>
         <main>{children}</main>

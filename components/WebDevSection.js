@@ -1,17 +1,23 @@
 import Image from "next/image";
 import Header from "./Header";
+import HomePageHero from "./HomePageHero";
+import { motion } from "framer-motion";
+import ServicesIncludes from "./ServicesIncludes";
+import PkgRate from "./PkgRate";
+import PgOptions from "./PgOptions";
 import About from "./About";
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 830px;
+  width: 55%;
   height: 100%;
   position: absolute;
-  left: 0;
-  border-right: solid 2px #000;
-  // background-color: #3aa1aa;
+  right: 0;
+  background: #333232;
+  color: #fff;
+
   z-index: 1000;
   text-decoration: none;
 
@@ -50,8 +56,11 @@ const LeftSideSection = () => {
   return (
     <Wrapper>
       <LeftSideContent>
-        <Header />
         <About />
+        <HomePageHero />
+        <ServicesIncludes />
+        <PkgRate />
+        <PgOptions />
       </LeftSideContent>
     </Wrapper>
   );

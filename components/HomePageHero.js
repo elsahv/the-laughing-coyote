@@ -1,8 +1,14 @@
-import React from "react";
+import styled from "styled-components";
+
+const Section = styled.section`
+  height: 100vh;
+  background: pink;
+  padding: 100px;
+`;
 
 const HomePageHero = () => {
   return (
-    <>
+    <Section>
       <h2>Web Design for Creatives and Small Businesses</h2>
       <h3>Stand out in the crowd</h3>
       <h2>Info</h2>
@@ -12,8 +18,8 @@ const HomePageHero = () => {
         facilis fugiat saepe, quisquam maxime impedit iure voluptatibus
         consequuntur, molestias unde.
       </p>
-      <button>CTA BUTTON</button>
-    </>
+      <button style={{ width: "100px", height: "20px" }}>CTA BUTTON</button>
+    </Section>
   );
 };
 

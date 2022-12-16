@@ -132,19 +132,19 @@ export const Paragraph = styled.p`
 const about = () => {
   return (
     <>
-      <div id="about">
+      <section id="about">
         <Wrapper>
           <Grid>
             <ImageWrapper>
-              <Image
+              {/* <Image
                 className="portfolio-img"
                 src={PortfolioPic}
                 alt="elsa hovey"
                 layout="responsive"
-              />
+              /> */}
             </ImageWrapper>
             <AboutContent>
-              <AboutTitle>About Elsa</AboutTitle>
+              <AboutTitle>About WTBH</AboutTitle>
               <Paragraph>
                 - Im currently working as a freelance web developer while
                 building up my
@@ -160,7 +160,7 @@ const about = () => {
             </AboutContent>
           </Grid>
         </Wrapper>
-      </div>
+      </section>
     </>
   );
 };
