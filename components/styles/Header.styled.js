@@ -5,7 +5,7 @@ export const MenuItems = styled.div`
 `;
 
 export const Logo = styled.h1`
-  font-size: 80px;
+  font-size: 70px;
   display: block;
   padding: 70px 0 35px 25px;
   // background: green;
@@ -21,6 +21,19 @@ export const Logo = styled.h1`
 
   @media only screen and (max-width: 834px) {
     font-size: 30px;
+  }
+`;
+
+export const PageID = styled.h2`
+  font-size: 30px;
+  padding: 5x 0;
+  a {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+  }
+  @media only screen and (max-width: 834px) {
+    font-size: 28px;
   }
 `;
 

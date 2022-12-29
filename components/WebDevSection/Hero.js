@@ -84,6 +84,14 @@ const Icon = styled.div`
 `;
 //todo SERVICES STYLES
 
+{
+  /* <div>
+              Each project requires different tools, always updating and
+              changing. I mainly portfolio with JS frameportfolios and PHP. View
+              arsenal...
+            </div> */
+}
+
 const HomePageHero = () => {
   return (
     <Section>
