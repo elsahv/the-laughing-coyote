@@ -53,10 +53,14 @@ const LeftSideSection = () => {
   return (
     <Wrapper>
       <LeftSideContent>
-        <Hero />
+        {/* <Hero />
         <ServicesIncludes />
         <PkgRate />
-        <PgOptions />
+        <PgOptions /> */}
+        <ul>
+          <li>blog</li>
+          <li>cat 2</li>
+        </ul>
       </LeftSideContent>
     </Wrapper>
   );

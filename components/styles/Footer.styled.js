@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Footer = styled.footer`
-  // background: teal;
-  position: absolute;
+  color: teal;
+  position: relative;
   bottom: 0;
   right: 0;
   padding: 10px 25px;
