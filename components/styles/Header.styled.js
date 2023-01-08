@@ -16,24 +16,12 @@ export const Logo = styled.h1`
   }
 
   @media only screen and (max-width: 1024px) {
-    padding-top: 10px;
+    font-size: 45px;
   }
 
   @media only screen and (max-width: 834px) {
-    font-size: 30px;
-  }
-`;
-
-export const PageID = styled.h2`
-  font-size: 30px;
-  padding: 5x 0;
-  a {
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 1px 1px 1px #000;
-  }
-  @media only screen and (max-width: 834px) {
-    font-size: 28px;
+    font-size: 37px;
+    padding: 60px 10px 20px 10px;
   }
 `;
 

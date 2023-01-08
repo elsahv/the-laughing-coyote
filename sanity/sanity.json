@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "backend-eh"
+    "name": "the-indoor-jungle-project"
   },
   "api": {
-    "projectId": "mul81jdt",
+    "projectId": "wcrwdaqq",
     "dataset": "production"
   },
   "plugins": [
