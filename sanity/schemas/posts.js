@@ -31,6 +31,21 @@ export default {
       },
     },
     {
+      title: "Published date",
+      name: "publishedDate",
+      type: "date",
+      options: {
+        dateFormat: "MM-DD-YYYY",
+        calendarTodayLabel: "Today",
+      },
+    },
+    {
+      name: "categories",
+      type: "array",
+      title: "Categories",
+      of: [{ type: "reference", to: { type: "category" } }],
+    },
+    {
       name: "body",
       title: "Body",
       type: "blockContent",

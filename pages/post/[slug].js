@@ -1,58 +1,154 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { sanityClient, urlFor } from "../../client";
 import { PortableText } from "@portabletext/react";
-import PostLeftSide from "../../components/PostLeftSide";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 import styled from "styled-components";
 
-const PostHero = styled.div`
+const Wrapper = styled.div`
   width: 100%;
-  height: 800px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "title mainImg mainImg mainImg";
-  background: #333232;
-`;
-
-const PostWrapper = styled.div`
-  width: 75%;
   overflow-y: scroll;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   right: 0;
   border-left: solid 1px #000;
+  z-index: 1200;
+  background: #fff;
 `;
 
-const ImgWrapper = styled.main`
-  grid-area: mainImg;
-  margin: 50px 100px;
-  border: 1px solid #000;
-`;
-
-const PostTitle = styled.h2`
-  grid-area: title;
+const PostHero = styled.div`
+  width: 100%;
+  background: #333232;
   display: flex;
-  justify-content: center;
-  margin-top: 80px;
+  border-bottom: solid 1px #000;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+`;
+
+const PostHeroNav = styled.div`
+  padding: 25px;
+  background: #333232;
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+`;
+
+const Logo = styled.h1`
+  font-size: 30px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+`;
+
+const LinkItems = styled.div`
+  border-top: solid 1px #000;
+  margin-top: 10px;
+  padding-left: 5px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    border-top: none;
+  }
+`;
+
+const PostHeroContent = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50px;
+  padding: 35px 0 0 55px;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   text-transform: capitalize;
+  ul {
+    list-style: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+`;
+
+const IconWrapper = styled.div`
+  font-size: 25px;
+  padding: 15px;
+  cursor: pointer;
+  @media only screen and (max-width: 600px) {
+    padding: 0px;
+  }
+`;
+
+const PostTitle = styled.h3`
+  margin: 5px 0;
+  font-size: 20px;
+`;
+
+const ImgWrapper = styled.div`
+  grid-area: mainImg;
+  margin: 50px 100px;
+  // border: 1px solid #000;
+  height: 70vh;
+  @media only screen and (max-width: 1024px) {
+    height: 100%;
+    margin: 20px 30px;
+  }
 `;
 
 const PostTextWrapper = styled.div`
-  margin: 50px 200px;
+  // margin: 0 0 0 600px;
+  // background: green;
   opacity: 0.8;
   line-height: 1.5;
+  display: flex;
+  justify-content: flex-end;
 `;
 
-const post = ({ title, image, body }) => {
+const PostContainer = styled.div`
+  width: 70%;
+  padding: 45px 85px 0 0;
+  @media only screen and (max-width: 600px) {
+    padding: 40px 20px 20px;
+    width: 100%;
+  }
+`;
+
+const post = ({ title, publishedDate, image, body }) => {
   return (
     <>
-      <PostLeftSide />
-      <PostWrapper>
+      <Wrapper>
         <PostHero>
-          <PostTitle>{title}</PostTitle>
-          {/* ADD CATEGORY */}
-          {/* ADD DATE */}
+          <PostHeroNav>
+            <Logo>
+              <Link href="/">The Indoor Jungle Project</Link>
+            </Logo>
+            <LinkItems>
+              <Link href="/#about">about</Link>
+              <Link href="/#contact">contact</Link>
+            </LinkItems>
+          </PostHeroNav>
+          <PostHeroContent>
+            <ul>
+              <li>
+                <IconWrapper>
+                  <Link href="/">
+                    <AiOutlineArrowLeft />
+                  </Link>
+                </IconWrapper>
+              </li>
+              <li>
+                <PostTitle>{title}</PostTitle>
+              </li>
+              <li>{publishedDate}</li>
+            </ul>
+          </PostHeroContent>
           <ImgWrapper>
             <img
               src={urlFor(image)}
@@ -64,9 +160,12 @@ const post = ({ title, image, body }) => {
           </ImgWrapper>
         </PostHero>
         <PostTextWrapper>
-          <PortableText value={body} />
+          <PostContainer>
+            <PortableText value={body} />
+          </PostContainer>
         </PostTextWrapper>
-      </PostWrapper>
+        <footer>blog footer</footer>
+      </Wrapper>
     </>
   );
 };
@@ -76,6 +175,7 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = `*[_type == "posts" && slug.current == $pageSlug][0] {
   title,
+  publishedDate,
   image,
   body,
 }`;
@@ -90,6 +190,7 @@ export const getServerSideProps = async (pageContext) => {
     return {
       props: {
         title: post.title,
+        publishedDate: post.publishedDate,
         image: post.image,
         body: post.body,
       },

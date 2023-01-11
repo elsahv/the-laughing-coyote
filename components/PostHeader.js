@@ -1,14 +1,19 @@
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
-export const MenuItems = styled.div`
-  padding-left: 15px;
+export const Header = styled.header`
+  position: absolute;
+  top: 0;
+  z-index: 100000;
 `;
 
 export const Logo = styled.h1`
-  font-size: 70px;
-  display: block;
+  font-size: 40px;
+  width: 890px;
   padding: 70px 0 35px 25px;
   // background: green;
+
   a {
     color: #000;
     text-decoration: none;
@@ -28,6 +33,7 @@ export const Logo = styled.h1`
 export const NavLinks = styled.li`
   margin-bottom: 350px;
   margin-right: 55px;
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -48,3 +54,19 @@ export const NavLinks = styled.li`
     }
   }
 `;
+
+const HeaderSection = () => {
+  return (
+    <Header>
+      <Logo style>
+        <Link href="/">The Indoor Jungle Project</Link>
+      </Logo>
+      <NavLinks>
+        <Link href="/#about">About</Link>
+        <Link href="/#contact">Contact</Link>
+      </NavLinks>
+    </Header>
+  );
+};
+
+export default HeaderSection;

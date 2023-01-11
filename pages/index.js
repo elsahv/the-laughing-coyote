@@ -4,19 +4,23 @@ import { sanityClient, urlFor } from "../client";
 import LeftSide from "../components/LeftSide";
 import styled from "styled-components";
 
-const MainWrapper = styled.div`
+const RightSide = styled.div`
   width: 55%;
   background-color: #333232;
   color: #fff;
   text-shadow: 1px 1px 1px #000;
   overflow-y: scroll;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   right: 0;
   // background: maroon;
 
-  @media only screen and (max-width: 1024px) {
-    margin-left: 470px;
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: none;
   }
 `;
 
@@ -35,9 +39,14 @@ const BlogPostsGrid = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 0 0 50px;
+  // background: pink;
 
-  @media only screen and (max-width: 810px) {
-    margin: 0 0 0 20px;
+  @media only screen and (max-width: 1024px) {
+    margin: 0 0 0 30px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    margin: 10px;
   }
 `;
 
@@ -52,21 +61,40 @@ const Image = styled.img`
   border: solid 1px #000;
   width: 950px;
   height: 550px;
+  cursor: pointer;
   @media only screen and (max-width: 1024px) {
     width: 450px;
     height: 290px;
   }
   @media only screen and (max-width: 834px) {
-    width: 370px;
+    width: 390px;
     height: 250px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    width: 340px;
   }
 `;
 
 const PostDescription = styled.p`
   // background: pink;
-  padding: 5px 10px;
+  padding: 15px;
   @media only screen and (max-width: 1024px) {
     padding-right: 100px;
+  }
+`;
+
+const Button = styled.button`
+  margin-left: 10px;
+  border: solid 1px #000;
+  border-radius: 5px;
+  background: lightgray;
+  padding: 2px 5px;
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  @media only screen and (max-width: 1024px) {
   }
 `;
 
@@ -74,7 +102,7 @@ const Home = ({ posts }) => {
   return (
     <>
       <LeftSide />
-      <MainWrapper>
+      <RightSide>
         <HomeDescriptionP>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore
           ullam qui corrupti impedit sed reiciendis architecto dignissimos
@@ -85,16 +113,20 @@ const Home = ({ posts }) => {
           {posts &&
             posts.map((post, index) => (
               <span key={index}>
+                <PostTitle>{post.title}</PostTitle>
                 <Link href={`post/${post.slug.current}`}>
-                  <PostTitle>{post.title}</PostTitle>
+                  <Image src={urlFor(post.image)} alt="" />
                 </Link>
-
-                <Image src={urlFor(post.image)} alt="" />
-                <PostDescription>{post.description}</PostDescription>
+                <PostDescription>
+                  {post.description}
+                  <Button>
+                    <Link href={`post/${post.slug.current}`}>Read more</Link>
+                  </Button>
+                </PostDescription>
               </span>
             ))}
         </BlogPostsGrid>
-      </MainWrapper>
+      </RightSide>
     </>
   );
 };
