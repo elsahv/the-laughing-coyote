@@ -1,5 +1,6 @@
 import Header from "./Header";
 import styled from "styled-components";
+import ContactForm from "./ContactForm";
 
 const Wrapper = styled.div`
   // background: teal;
@@ -60,14 +61,7 @@ const LeftSideWrapper = () => {
       </AboutSection>
       <ContactSection id="contact" class="section">
         <h2>contact</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quia, eos
-        a ab sapiente commodi, non aut quam quod nobis voluptates debitis sunt
-        rem mollitia deserunt velit fugiat facere doloremque neque. Eligendi
-        accusamus repudiandae nesciunt culpa expedita ab adipisci quidem dolor
-        iste, facere vero perferendis assumenda enim eveniet vel ut ratione
-        tempore? Neque ipsam officiis laudantium delectus suscipit culpa dicta
-        sunt aut a, facere quia cupiditate. Aliquid mollitia ullam nesciunt
-        autem labore. Blanditiis, eligendi quis ut harum quos quod obcaecati
+        <ContactForm />
       </ContactSection>
     </Wrapper>
   );
