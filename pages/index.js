@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { sanityClient, urlFor } from "../client";
 import LeftSide from "../components/LeftSide";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const RightSide = styled.div`
@@ -101,32 +102,38 @@ const Button = styled.button`
 const Home = ({ posts }) => {
   return (
     <>
-      <LeftSide />
-      <RightSide>
-        <HomeDescriptionP>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore
-          ullam qui corrupti impedit sed reiciendis architecto dignissimos
-          quaerat perspiciatis laborum placeat, iusto harum et error aliquid cum
-          libero numquam.
-        </HomeDescriptionP>
-        <BlogPostsGrid>
-          {posts &&
-            posts.map((post, index) => (
-              <span key={index}>
-                <PostTitle>{post.title}</PostTitle>
-                <Link href={`post/${post.slug.current}`}>
-                  <Image src={urlFor(post.image)} alt="" />
-                </Link>
-                <PostDescription>
-                  {post.description}
-                  <Button>
-                    <Link href={`post/${post.slug.current}`}>Read more</Link>
-                  </Button>
-                </PostDescription>
-              </span>
-            ))}
-        </BlogPostsGrid>
-      </RightSide>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <LeftSide />
+        <RightSide>
+          <HomeDescriptionP>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+            inventore ullam qui corrupti impedit sed reiciendis architecto
+            dignissimos quaerat perspiciatis laborum placeat, iusto harum et
+            error aliquid cum libero numquam.
+          </HomeDescriptionP>
+          <BlogPostsGrid>
+            {posts &&
+              posts.map((post, index) => (
+                <span key={index}>
+                  <PostTitle>{post.title}</PostTitle>
+                  <Link href={`post/${post.slug.current}`}>
+                    <Image src={urlFor(post.image)} alt="" />
+                  </Link>
+                  <PostDescription>
+                    {post.description}
+                    <Button>
+                      <Link href={`post/${post.slug.current}`}>Read more</Link>
+                    </Button>
+                  </PostDescription>
+                </span>
+              ))}
+          </BlogPostsGrid>
+        </RightSide>
+      </motion.div>
     </>
   );
 };

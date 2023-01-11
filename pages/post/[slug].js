@@ -3,6 +3,8 @@ import Link from "next/link";
 import { sanityClient, urlFor } from "../../client";
 import { PortableText } from "@portabletext/react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { motion } from "framer-motion";
+
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -123,49 +125,55 @@ const PostContainer = styled.div`
 const post = ({ title, publishedDate, image, body }) => {
   return (
     <>
-      <Wrapper>
-        <PostHero>
-          <PostHeroNav>
-            <Logo>
-              <Link href="/">The Indoor Jungle Project</Link>
-            </Logo>
-            <LinkItems>
-              <Link href="/#about">about</Link>
-              <Link href="/#contact">contact</Link>
-            </LinkItems>
-          </PostHeroNav>
-          <PostHeroContent>
-            <ul>
-              <li>
-                <IconWrapper>
-                  <Link href="/">
-                    <AiOutlineArrowLeft />
-                  </Link>
-                </IconWrapper>
-              </li>
-              <li>
-                <PostTitle>{title}</PostTitle>
-              </li>
-              <li>{publishedDate}</li>
-            </ul>
-          </PostHeroContent>
-          <ImgWrapper>
-            <img
-              src={urlFor(image)}
-              alt=""
-              className="img"
-              width="100%"
-              height="100%"
-            />
-          </ImgWrapper>
-        </PostHero>
-        <PostTextWrapper>
-          <PostContainer>
-            <PortableText value={body} />
-          </PostContainer>
-        </PostTextWrapper>
-        <footer>blog footer</footer>
-      </Wrapper>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3, duration: 0.5 }}
+      >
+        <Wrapper>
+          <PostHero>
+            <PostHeroNav>
+              <Logo>
+                <Link href="/">The Indoor Jungle Project</Link>
+              </Logo>
+              <LinkItems>
+                <Link href="/#about">about</Link>
+                <Link href="/#contact">contact</Link>
+              </LinkItems>
+            </PostHeroNav>
+            <PostHeroContent>
+              <ul>
+                <li>
+                  <IconWrapper>
+                    <Link href="/">
+                      <AiOutlineArrowLeft />
+                    </Link>
+                  </IconWrapper>
+                </li>
+                <li>
+                  <PostTitle>{title}</PostTitle>
+                </li>
+                <li>{publishedDate}</li>
+              </ul>
+            </PostHeroContent>
+            <ImgWrapper>
+              <img
+                src={urlFor(image)}
+                alt=""
+                className="img"
+                width="100%"
+                height="100%"
+              />
+            </ImgWrapper>
+          </PostHero>
+          <PostTextWrapper>
+            <PostContainer>
+              <PortableText value={body} />
+            </PostContainer>
+          </PostTextWrapper>
+          <footer>blog footer</footer>
+        </Wrapper>
+      </motion.div>
     </>
   );
 };
