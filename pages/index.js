@@ -32,7 +32,18 @@ const HomeDescriptionP = styled.p`
   margin-bottom: 50px;
   width: 75%;
   @media only screen and (max-width: 1024px) {
-    margin-top: 90px;
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+  @media only screen and (max-width: 810px) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin: 35px 10px 0;
+  }
+  @media only screen and (max-width: 531px) {
   }
 `;
 
@@ -83,6 +94,12 @@ const PostDescription = styled.p`
   @media only screen and (max-width: 1024px) {
     padding-right: 100px;
   }
+  @media only screen and (max-width: 834px) {
+    padding-right: 40px;
+  }
+  @media only screen and (max-width: 531px) {
+    padding: 5px;
+  }
 `;
 
 const Button = styled.button`
@@ -95,7 +112,9 @@ const Button = styled.button`
     color: #000;
     text-decoration: none;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 531px) {
+    padding: 0;
+    margin: 0;
   }
 `;
 
@@ -123,12 +142,10 @@ const Home = ({ posts }) => {
                   <Link href={`post/${post.slug.current}`}>
                     <Image src={urlFor(post.image)} alt="" />
                   </Link>
-                  <PostDescription>
-                    {post.description}
-                    <Button>
-                      <Link href={`post/${post.slug.current}`}>Read more</Link>
-                    </Button>
-                  </PostDescription>
+                  <PostDescription>{post.description}</PostDescription>
+                  <Button>
+                    <Link href={`post/${post.slug.current}`}>Read more</Link>
+                  </Button>
                 </span>
               ))}
           </BlogPostsGrid>

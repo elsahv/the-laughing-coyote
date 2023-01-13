@@ -69,7 +69,7 @@ const HeaderSection = () => {
       <NavLinks>
         <Link href="/#about">About</Link>
         <Link href="/#contact">Contact</Link>
-        <Link href="/">Blog</Link>
+        {/* <Link href="/">Blog</Link> */}
       </NavLinks>
     </Header>
   );

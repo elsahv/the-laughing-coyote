@@ -25,9 +25,9 @@ const Wrapper = styled.div`
 `;
 
 const AboutSection = styled.section`
-  background: orange;
+  // background: orange;
   grid-area: b;
-  margin-top: 500px;
+  margin-top: 400px;
 
   @media only screen and (max-width: 600px) {
     margin-top: 50px;

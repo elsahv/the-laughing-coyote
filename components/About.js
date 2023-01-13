@@ -15,6 +15,7 @@ const About = () => {
   return (
     <Wrapper>
       <AboutSection id="about">
+        {/* cta to blog */}
         About P- Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Beatae, dolore officia, sit ipsa sapiente animi aliquid voluptas ex
         alias reprehenderit iusto laudantium. Officiis minima laudantium
