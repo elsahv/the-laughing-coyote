@@ -15,37 +15,34 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    background: #0892a5;
+    background: #588157;
     border: solid 2px #000;
     padding-left: 10px;
     padding-top: 5px;
-    color: aquamarine;
-    // opacity: 0.8;
     font-size: 18px;
     &:hover {
       opacity: 0.7;
-      color: aquamarine;
       transition: 1s;
-      background: #0892a5;
     }
   }
   .btn {
-    background: aquamarine;
-    color: #000;
+    background: #6a040f;
+    color: #fff;
     width: 30%;
     padding: 0px 5px;
     margin-top: 25px;
     border: solid 2px #000;
     font-size: 17px;
     cursor: pointer;
+    opacity: 0.9;
 
     &:hover {
-      background: #0892a5;
-      color: aquamarine;
       transition: 1s;
+      opacity: 0.7;
     }
-    @media only screen and (max-width: 820px) {
+    @media only screen and (max-width: 1024px) {
       font-size: 15px;
+      width: 40%;
     }
     @media only screen and (max-width: 599px) {
       width: 130px;

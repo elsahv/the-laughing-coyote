@@ -62,6 +62,7 @@ const ContactForm = () => {
   return (
     <Wrapper>
       <Form ref={form} onSubmit={handleSubmit}>
+        <h2>Contact Me</h2>
         {/* NAME */}
         <Label htmlFor="name">
           {errors.name && touched.name ? (

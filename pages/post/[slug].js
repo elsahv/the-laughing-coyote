@@ -105,10 +105,7 @@ const ImgWrapper = styled.div`
 `;
 
 const PostTextWrapper = styled.div`
-  // margin: 0 0 0 600px;
-  // background: green;
   opacity: 0.8;
-  line-height: 1.5;
   display: flex;
   justify-content: flex-end;
 `;

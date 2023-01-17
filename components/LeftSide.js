@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Header from "./Header";
 import styled from "styled-components";
 import ContactForm from "./ContactForm";
+import PortfolioPic from "../public/images/portfolio-pic.jpg";
 
 const Wrapper = styled.div`
   // background: teal;
@@ -28,14 +30,32 @@ const AboutSection = styled.section`
   // background: orange;
   grid-area: b;
   margin-top: 400px;
+  padding: 20px;
 
   @media only screen and (max-width: 600px) {
     margin-top: 50px;
   }
 `;
 
+export const ImageWrapper = styled.div`
+  position: relative;
+  width: 300px;
+  grid-area: left;
+  border: solid 2px #000;
+  margin-left: 15px;
+  margin-top: 15px;
+
+  @media only screen and (max-width: 1024px) {
+    width: 210px;
+    margin-right: 20px;
+  }
+  @media only screen and (max-width: 834px) {
+    // width: 200px;
+  }
+`;
+
 const ContactSection = styled.section`
-  margin-top: 100px;
+  margin-top: 200px;
 `;
 
 const LeftSideWrapper = () => {
@@ -44,23 +64,18 @@ const LeftSideWrapper = () => {
       <Header />
 
       <AboutSection id="about" class="section">
-        <h2>about</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quia, eos
-        a ab sapiente commodi, non aut quam quod nobis voluptates debitis sunt
-        rem mollitia deserunt velit fugiat facere doloremque neque. Eligendi
-        accusamus repudiandae nesciunt culpa expedita ab adipisci quidem dolor
-        iste, facere vero perferendis assumenda enim eveniet vel ut ratione
-        aperiam nisi et saepe eum eveniet totam. Officia cumque praesentium
-        consequuntur! Deleniti quibusdam deserunt nostrum reprehenderit laborum
-        architecto provident sequi in ipsam dolore natus, optio corporis
-        recusandae, nesciunt cumque eum modi magnam ducimus rem temporibus quos
-        eius officia quo nisi? Eum iusto ullam esse dolores, dolorem at
-        consequatur tempora quibusdam. Inventore reiciendis non, exercitationem
-        facere culpa itaque quaerat delectus aliquid, sed placeat blanditiis!
-        Aut, neque quas.
+        <h2>About</h2>
+        <p style={{ padding: "10px 0" }}>
+          Hi there and welcome! My names Elsa, Ive created The Indoor Jungle
+          Project to learn more about growing houseplants, and to further my
+          skills in website development and design. Im excited for what is to
+          come, join me as this website grows!
+        </p>
       </AboutSection>
+      <ImageWrapper>
+        <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
+      </ImageWrapper>
       <ContactSection id="contact" class="section">
-        <h2>contact</h2>
         <ContactForm />
       </ContactSection>
     </Wrapper>
