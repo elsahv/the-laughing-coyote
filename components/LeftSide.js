@@ -63,7 +63,7 @@ const LeftSideWrapper = () => {
     <Wrapper>
       <Header />
 
-      <AboutSection id="about" class="section">
+      <AboutSection id="about" className="section">
         <h2>About</h2>
         <p style={{ padding: "10px 0" }}>
           Hi there and welcome! My names Elsa, Ive created The Indoor Jungle
@@ -75,7 +75,7 @@ const LeftSideWrapper = () => {
       <ImageWrapper>
         <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
       </ImageWrapper>
-      <ContactSection id="contact" class="section">
+      <ContactSection id="contact" className="section">
         <ContactForm />
       </ContactSection>
     </Wrapper>

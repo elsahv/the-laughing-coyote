@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  // color: #000;
   // background: green;
 `;
 
@@ -17,6 +16,7 @@ export const Form = styled.form`
   .input-fields {
     background: #588157;
     border: solid 2px #000;
+
     padding-left: 10px;
     padding-top: 5px;
     font-size: 18px;
@@ -64,6 +64,7 @@ export const Input = styled.input`
   height: 50px;
   border-radius: 5px;
   width: 500px;
+  color: #000;
 
   @media only screen and (max-width: 1024px) {
     width: 300px;
@@ -91,7 +92,6 @@ export const SuccessMessageStyles = styled.div`
   position: absolute;
   width: 500px;
   height: 470px;
-  // opacity: 0.7;
   @media only screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;

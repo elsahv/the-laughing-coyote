@@ -4,7 +4,7 @@ import { sanityClient, urlFor } from "../../client";
 import { PortableText } from "@portabletext/react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { motion } from "framer-motion";
-
+import { format } from "date-fns";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
