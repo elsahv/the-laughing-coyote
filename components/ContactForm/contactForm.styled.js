@@ -14,7 +14,7 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    color: #588157;
+    color: #000;
     border: solid 2px #000;
 
     padding-left: 10px;
@@ -26,7 +26,7 @@ export const Form = styled.form`
     }
   }
   .btn {
-    background: #6a040f;
+    background: #588157;
     color: #fff;
     width: 30%;
     padding: 0px 5px;
@@ -34,11 +34,12 @@ export const Form = styled.form`
     border: solid 2px #000;
     font-size: 17px;
     cursor: pointer;
-    opacity: 0.9;
+    text-shadow: 1px 1px 1px gray;
 
     &:hover {
       transition: 1s;
-      opacity: 0.7;
+      color: maroon;
+      text-shadow: none;
     }
     @media only screen and (max-width: 1024px) {
       font-size: 15px;
