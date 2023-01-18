@@ -14,7 +14,7 @@ export const Form = styled.form`
   justify-content: center;
   flex-direction: column;
   .input-fields {
-    background: #588157;
+    color: #588157;
     border: solid 2px #000;
 
     padding-left: 10px;
@@ -58,6 +58,7 @@ export const ErrorStyles = styled.div`
   color: maroon;
   font-size: 15px;
   text-transform: lowercase;
+  opacity: 0.8;
 `;
 
 export const Input = styled.input`
