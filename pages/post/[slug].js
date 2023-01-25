@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { sanityClient, urlFor } from "../../client";
+import sanityClient from "../../utils/client";
+import { urlFor } from "../../utils/image";
 import { PortableText } from "@portabletext/react";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { motion } from "framer-motion";

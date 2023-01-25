@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sanityClient, urlFor } from "../client";
+import { urlFor } from "../utils/image";
 import styled from "styled-components";
 
 const PostTitle = styled.h2`

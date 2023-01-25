@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { sanityClient, urlFor } from "../client";
+import sanityClient from "../utils/client";
 import LeftSide from "../components/LeftSide";
 import { motion } from "framer-motion";
 import styled from "styled-components";
