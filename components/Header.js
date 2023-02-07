@@ -60,6 +60,14 @@ export const NavLinks = styled.li`
   }
 `;
 
+export const BlogPostMobileLink = styled.div`
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+    cursor: pointer;
+  }
+`;
+
 const HeaderSection = () => {
   return (
     <Header>
@@ -69,7 +77,9 @@ const HeaderSection = () => {
       <NavLinks>
         <Link href="/#about">About</Link>
         <Link href="/#contact">Contact</Link>
-        {/* <Link href="/">Blog</Link> */}
+        <Link href="/#blog">
+          <BlogPostMobileLink>Blog</BlogPostMobileLink>
+        </Link>
       </NavLinks>
     </Header>
   );

@@ -98,7 +98,7 @@ const Home = ({ posts }) => {
           <LeftSideWrapper>
             <LeftSide />
           </LeftSideWrapper>
-          <RightSideWrapper>
+          <RightSideWrapper id="blog">
             <Title>Blog Posts</Title>
             <BlogPostsGrid>
               {posts &&
