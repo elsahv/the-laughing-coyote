@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
   @media only screen and (max-width: 600px) {
     position: relative;
-    bottom: 0;
+    top: 0;
     height: 100%;
     width: 100%;
 `;
@@ -71,6 +71,10 @@ const LeftSideWrapper = () => {
           skills in website development and design. Im excited for what is to
           come, join me as this website grows!
         </p>
+        <p>
+          This is my corner of creating art, houseplant living, and web design
+        </p>
+        <p>CTA- web design</p>
       </AboutSection>
       <ImageWrapper>
         <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
