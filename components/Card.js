@@ -11,7 +11,7 @@ const PostTitle = styled.h2`
 
 const Image = styled.img`
   border: solid 1px #000;
-  width: 950px;
+  width: 550px;
   height: 550px;
   cursor: pointer;
   @media only screen and (max-width: 1024px) {

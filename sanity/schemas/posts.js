@@ -1,6 +1,6 @@
 export default {
   name: "posts",
-  title: "Blog",
+  title: "Templates",
   type: "document",
   fields: [
     {
@@ -39,12 +39,12 @@ export default {
         calendarTodayLabel: "Today",
       },
     },
-    {
-      name: "categories",
-      type: "array",
-      title: "Categories",
-      of: [{ type: "reference", to: { type: "category" } }],
-    },
+    // {
+    //   name: "categories",
+    //   type: "array",
+    //   title: "Categories",
+    //   of: [{ type: "reference", to: { type: "category" } }],
+    // },
     {
       name: "body",
       title: "Body",

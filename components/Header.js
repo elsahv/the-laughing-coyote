@@ -72,7 +72,7 @@ const HeaderSection = () => {
   return (
     <Header>
       <Logo style>
-        <Link href="/">The Indoor Jungle Project</Link>
+        <Link href="/">The Laughing Coyote</Link>
       </Logo>
       <NavLinks>
         <Link href="/#about">About</Link>

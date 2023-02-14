@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "the-indoor-jungle-project"
+    "name": "the-laughing-coyote"
   },
   "api": {
-    "projectId": "wcrwdaqq",
+    "projectId": "5v0ba4w4",
     "dataset": "production"
   },
   "plugins": [
