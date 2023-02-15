@@ -66,15 +66,9 @@ const LeftSideWrapper = () => {
       <AboutSection id="about" className="section">
         <h2>About</h2>
         <p style={{ padding: "10px 0" }}>
-          Hi there and welcome! My names Elsa, Ive created The Indoor Jungle
-          Project to learn more about growing houseplants, and to further my
-          skills in website development and design. Im excited for what is to
-          come, join me as this website grows!
+          Hi there and welcome! My names Elsa, Ive created The Running Quail to
+          build landing pages for small business owners and creatives.
         </p>
-        <p>
-          This is my corner of creating art, houseplant living, and web design
-        </p>
-        <p>CTA- web design</p>
       </AboutSection>
       <ImageWrapper>
         <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
