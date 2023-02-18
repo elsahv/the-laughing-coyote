@@ -2,7 +2,8 @@ import Link from "next/link";
 import styled from "styled-components";
 
 export const Header = styled.header`
-  // background: blue;
+  padding-left: 20px;
+  padding-top 40px;
   #blog {
     color: blue;
   }
@@ -11,7 +12,8 @@ export const Header = styled.header`
 export const Logo = styled.h1`
   font-size: 70px;
   display: block;
-  padding: 70px 0 35px 25px;
+  // padding: 70px 0 35px 25px;
+  width: 80%;
   // background: green;
 
   a {
@@ -33,7 +35,9 @@ export const Logo = styled.h1`
 export const NavLinks = styled.li`
   margin-bottom: 350px;
   margin-right: 55px;
-  margin-left: 20px;
+  margin-top: 20px;
+
+  // margin-left: 20px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -60,14 +64,6 @@ export const NavLinks = styled.li`
   }
 `;
 
-export const BlogPostMobileLink = styled.div`
-  display: none;
-  @media only screen and (max-width: 600px) {
-    display: block;
-    cursor: pointer;
-  }
-`;
-
 const HeaderSection = () => {
   return (
     <Header>
@@ -76,10 +72,9 @@ const HeaderSection = () => {
       </Logo>
       <NavLinks>
         <Link href="/#about">About</Link>
+        <Link href="/">Services</Link>
+        <Link href="/">Rates</Link>
         <Link href="/#contact">Contact</Link>
-        <Link href="/#blog">
-          <BlogPostMobileLink>Blog</BlogPostMobileLink>
-        </Link>
       </NavLinks>
     </Header>
   );
