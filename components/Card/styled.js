@@ -1,15 +1,13 @@
-import Link from "next/link";
-import { urlFor } from "../utils/image";
 import styled from "styled-components";
 
-const PostTitle = styled.h2`
+export const PostTitle = styled.h2`
   // background: pink;
   margin-top: 50px;
   padding: 10px 5px;
   text-transform: capitalize;
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   border: solid 1px #000;
   width: 550px;
   height: 550px;
@@ -28,7 +26,7 @@ const Image = styled.img`
   }
 `;
 
-const PostDescription = styled.p`
+export const PostDescription = styled.p`
   // background: pink;
   padding: 15px;
   @media only screen and (max-width: 1024px) {
@@ -42,7 +40,7 @@ const PostDescription = styled.p`
   }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   margin-left: 10px;
   border: solid 1px #000;
   border-radius: 5px;
@@ -56,19 +54,5 @@ const Button = styled.button`
     padding: 0;
     margin: 0;
   }
+  //
 `;
-
-export default function Card({ post }) {
-  return (
-    <>
-      <PostTitle>{post.title}</PostTitle>
-      <Link href={`post/${post.slug.current}`}>
-        <Image src={urlFor(post.image)} alt="" />
-      </Link>
-      <PostDescription>{post.description}</PostDescription>
-      <Button>
-        <Link href={`post/${post.slug.current}`}>Read more</Link>
-      </Button>
-    </>
-  );
-}

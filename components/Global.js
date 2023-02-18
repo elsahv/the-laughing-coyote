@@ -15,7 +15,8 @@ const GlobalStyles = createGlobalStyle`
   }
  
   section {
-    padding: 20px;
+    padding: 70px 20px;
+    // background: orange;
 
   @media only screen and (max-width: 1024px) {
     padding: 10px;

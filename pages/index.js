@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-
 import sanityClient from "../utils/client";
 import LeftSide from "../components/LeftSide";
 import { motion } from "framer-motion";

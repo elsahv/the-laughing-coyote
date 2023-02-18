@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import styled from "styled-components";
 
 export const Header = styled.header`
-  position: absolute;
-  top: 0;
-  z-index: 100000;
+  padding-left: 20px;
+  padding-top 40px;
+  #blog {
+    color: blue;
+  }
 `;
 
 export const Logo = styled.h1`
-  font-size: 40px;
-  width: 890px;
-  padding: 70px 0 35px 25px;
+  font-size: 70px;
+  display: block;
+  // padding: 70px 0 35px 25px;
+  width: 80%;
   // background: green;
 
   a {
@@ -33,15 +34,18 @@ export const Logo = styled.h1`
 export const NavLinks = styled.li`
   margin-bottom: 350px;
   margin-right: 55px;
-  margin-left: 20px;
+  margin-top: 20px;
+
+  // margin-left: 20px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
   text-decoration: none;
-  padding: 35px;
+  padding: 10px;
   font-size: 25px;
+  border-top: solid 2px #333232;
+  border-bottom: solid 2px #333232;
 
-  border-top: solid 2px black;
   a {
     margin: 1px 0;
     text-decoration: none;
@@ -53,20 +57,8 @@ export const NavLinks = styled.li`
       text-shadow: 1px 1px 1px #000;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    margin: 20px 0;
+  }
 `;
-
-const HeaderSection = () => {
-  return (
-    <Header>
-      <Logo style>
-        <Link href="/">The Indoor Jungle Project</Link>
-      </Logo>
-      <NavLinks>
-        <Link href="/#about">About</Link>
-        <Link href="/#contact">Contact</Link>
-      </NavLinks>
-    </Header>
-  );
-};
-
-export default HeaderSection;
