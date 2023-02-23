@@ -9,8 +9,8 @@ export const PostTitle = styled.h2`
 
 export const Image = styled.img`
   border: solid 1px #000;
-  width: 950px;
-  height: 550px;
+  width: 100%;
+  // height: 550px;
   cursor: pointer;
   @media only screen and (max-width: 1024px) {
     width: 450px;

@@ -68,7 +68,7 @@ const Title = styled.h2`
 const BlogPostsGrid = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 50px;
+  margin: 0 100px 0 50px;
   // background: pink;
 
   @media only screen and (max-width: 1024px) {
