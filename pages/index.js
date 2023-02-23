@@ -98,7 +98,7 @@ const Home = ({ posts }) => {
             <LeftSide />
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
-            <Title>Featured Websites</Title>
+            <Title>Website Case Studies</Title>
             <BlogPostsGrid>
               {posts &&
                 posts.map((post, index) => (
