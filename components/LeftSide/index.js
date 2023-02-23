@@ -55,6 +55,7 @@ const LeftSideWrapper = () => {
       <ContactSection id="contact">
         <ContactForm />
       </ContactSection>
+      <section>footer</section>
     </Wrapper>
   );
 };
