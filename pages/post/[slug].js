@@ -42,7 +42,7 @@ const PostHeroNav = styled.div`
 `;
 
 const Logo = styled.h1`
-  font-size: 30px;
+  font-size: 22px;
 
   @media only screen and (max-width: 768px) {
     font-size: 22px;
@@ -132,7 +132,7 @@ const post = ({ title, publishedDate, image, body }) => {
           <PostHero>
             <PostHeroNav>
               <Logo>
-                <Link href="/">The Indoor Jungle Project</Link>
+                <Link href="/">Laughing Coyote- Development/ Design</Link>
               </Logo>
               <LinkItems>
                 <Link href="/#about">about</Link>
@@ -151,7 +151,7 @@ const post = ({ title, publishedDate, image, body }) => {
                 <li>
                   <PostTitle>{title}</PostTitle>
                 </li>
-                <li>{publishedDate}</li>
+                {/* <li>{publishedDate}</li> */}
               </ul>
             </PostHeroContent>
             <ImgWrapper>

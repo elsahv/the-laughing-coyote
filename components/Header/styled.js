@@ -9,7 +9,7 @@ export const Header = styled.header`
 `;
 
 export const Logo = styled.h1`
-  font-size: 70px;
+  font-size: 50px;
   display: block;
   // padding: 70px 0 35px 25px;
   width: 80%;

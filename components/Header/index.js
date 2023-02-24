@@ -4,8 +4,8 @@ import { Header, Logo, NavLinks } from "./styled";
 const HeaderSection = () => {
   return (
     <Header>
-      <Logo style>
-        <Link href="/">The Laughing Coyote</Link>
+      <Logo>
+        <Link href="/">Laughing Coyote Development/ Design</Link>
       </Logo>
       <NavLinks>
         <Link href="/#about">About</Link>
