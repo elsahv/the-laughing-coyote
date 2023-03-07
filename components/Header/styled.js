@@ -8,17 +8,15 @@ export const Header = styled.header`
   }
 `;
 
-export const Logo = styled.h1`
-  font-size: 50px;
-  display: block;
-  // padding: 70px 0 35px 25px;
-  width: 80%;
-  // background: green;
+export const Logo = styled.div`
+  // width: 80%;
+  h1 {
+    font-size: 60px;
+  }
 
   a {
     color: #000;
     text-decoration: none;
-    // text-shadow: 1px 1px 1px #000;
   }
 
   @media only screen and (max-width: 1024px) {
