@@ -12,7 +12,7 @@ export const Logo = styled.h1`
   font-size: 50px;
   // display: block;
   // padding: 70px 0 35px 25px;
-  // width: 80%;
+  width: 80%;
   // background: green;
 
   a {
