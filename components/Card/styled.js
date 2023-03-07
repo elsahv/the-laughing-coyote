@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const PostTitle = styled.h2`
   // background: pink;
-  margin-top: 50px;
+  margin-top: 150px;
   padding: 10px 5px;
   text-transform: capitalize;
 `;
@@ -12,6 +12,11 @@ export const Image = styled.img`
   width: 100%;
   // height: 550px;
   cursor: pointer;
+  &:hover {
+    // transform: rotate(2deg);
+    transition: 1s;
+    opacity: 0.7;
+  }
   @media only screen and (max-width: 1024px) {
     width: 450px;
     height: 290px;

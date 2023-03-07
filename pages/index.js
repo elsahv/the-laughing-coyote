@@ -44,9 +44,9 @@ const RightSideWrapper = styled.div`
 const Title = styled.h2`
   // background: pink;
   font-size: 35px;
-  margin-top: 120px;
+  margin-top: 50px;
   margin-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   width: 75%;
   text-decoration: underline;
   @media only screen and (max-width: 1024px) {
@@ -98,7 +98,14 @@ const Home = ({ posts }) => {
             <LeftSide />
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
-            <Title>Website Case Studies</Title>
+            {/* <Title>Blog/ Website Case Studies</Title> */}
+            <Title>Most Recent Articles</Title>
+            <p style={{ padding: "0 55px" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
+              necessitatibus delectus, eligendi ducimus praesentium qui
+              veritatis expedita obcaecati aut fugit sed quod quae velit fuga
+              exercitationem asperiores quos ullam facere.
+            </p>
             <BlogPostsGrid>
               {posts &&
                 posts.map((post, index) => (
