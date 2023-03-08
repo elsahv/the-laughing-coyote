@@ -1,6 +1,6 @@
 export default {
   name: "posts",
-  title: "Templates",
+  title: "Posts",
   type: "document",
   fields: [
     {
