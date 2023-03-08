@@ -41,28 +41,11 @@ const RightSideWrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Tagline = styled.h2`
+  font-size: 28px;
+  margin: 50px 20px 0 30px;
+  padding: 50px 30px;
   // background: pink;
-  font-size: 35px;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-bottom: 10px;
-  width: 75%;
-  text-decoration: underline;
-  @media only screen and (max-width: 1024px) {
-    margin-left: 30px;
-    margin-top: 50px;
-  }
-
-  @media only screen and (max-width: 810px) {
-    width: 90%;
-  }
-
-  @media only screen and (max-width: 768px) {
-    margin: 35px 10px 0;
-  }
-  @media only screen and (max-width: 531px) {
-  }
 `;
 
 const BlogPostsGrid = styled.div`
@@ -98,11 +81,10 @@ const Home = ({ posts }) => {
             <LeftSide />
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
-            {/* <Title>Blog/ Website Case Studies</Title> */}
-            <h2 style={{ padding: "55px" }}>
-              Software dev and web design/ sources for small business owners
-            </h2>
-            <Title>Most Recent</Title>
+            <Tagline>
+              Software dev and web design/ sources for small business owners...
+              Scroll down for most recent posts.
+            </Tagline>
 
             <BlogPostsGrid>
               {posts &&

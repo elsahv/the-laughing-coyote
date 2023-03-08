@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  margin: 50px 0 70px;
+`;
+
 export const PostTitle = styled.h2`
   // background: pink;
-  margin-top: 150px;
+  // margin-top: 150px;
   padding: 10px 5px;
   text-transform: capitalize;
 `;

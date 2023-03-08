@@ -2,7 +2,7 @@ import Image from "next/image";
 import Header from "../Header";
 import ContactForm from "../ContactForm";
 import PortfolioPic from "../../public/images/portfolio-pic.jpg";
-import { Wrapper, ImageWrapper, ContactSection } from "./styled";
+import { Wrapper, Section, ImageWrapper, ContactSection } from "./styled";
 
 //TODO: IMPLEMENT SERVICES AND RATES WHEN READY
 
@@ -11,13 +11,15 @@ const LeftSideWrapper = () => {
     <Wrapper>
       <Header />
       {/* //*ABOUT */}
-      <section id="about">
+      <Section id="about">
         <h2>About</h2>
         <p>
-          Hi there and welcome! My names Elsa, Ive created The Running Quail to
-          build landing pages for small business owners and creatives.
+          Welcome to Laughing Coyote! This site is currently a work in progress,
+          functioning as a blog for web design content for small businesses.{" "}
+          {"I'm"} Elsa, a web developer {"who's"} built websites about food, and
+          web design, and plants.
         </p>
-      </section>
+      </Section>
       <ImageWrapper>
         <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
       </ImageWrapper>
@@ -57,7 +59,9 @@ const LeftSideWrapper = () => {
       <ContactSection id="contact">
         <ContactForm />
       </ContactSection>
-      <section>footer</section>
+      <footer style={{ padding: "15px 25px" }}>
+        Laughing Coyote- Copyright @ 2023
+      </footer>
     </Wrapper>
   );
 };

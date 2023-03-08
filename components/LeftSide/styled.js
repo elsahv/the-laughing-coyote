@@ -17,6 +17,12 @@ export const Wrapper = styled.div`
     width: 100%;
 `;
 
+export const Section = styled.section`
+  p {
+    padding-right: 30px;
+  }
+`;
+
 export const ImageWrapper = styled.div`
   position: relative;
   width: 300px;

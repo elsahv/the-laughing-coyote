@@ -78,7 +78,7 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   height: 170px;
   border-radius: 5px;
-  // margin: 40px 0;
+  width: 500px;
 `;
 
 export const SuccessMessageStyles = styled.div`
