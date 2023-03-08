@@ -99,13 +99,11 @@ const Home = ({ posts }) => {
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
             {/* <Title>Blog/ Website Case Studies</Title> */}
-            <Title>Most Recent Articles</Title>
-            <p style={{ padding: "0 55px" }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              necessitatibus delectus, eligendi ducimus praesentium qui
-              veritatis expedita obcaecati aut fugit sed quod quae velit fuga
-              exercitationem asperiores quos ullam facere.
-            </p>
+            <h2 style={{ padding: "55px" }}>
+              Software dev and web design/ sources for small business owners
+            </h2>
+            <Title>Most Recent</Title>
+
             <BlogPostsGrid>
               {posts &&
                 posts.map((post, index) => (

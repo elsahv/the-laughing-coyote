@@ -4,6 +4,8 @@ import ContactForm from "../ContactForm";
 import PortfolioPic from "../../public/images/portfolio-pic.jpg";
 import { Wrapper, ImageWrapper, ContactSection } from "./styled";
 
+//TODO: IMPLEMENT SERVICES AND RATES WHEN READY
+
 const LeftSideWrapper = () => {
   return (
     <Wrapper>
@@ -20,7 +22,7 @@ const LeftSideWrapper = () => {
         <Image src={PortfolioPic} alt="elsa hovey" layout="responsive" />
       </ImageWrapper>
       {/* //TODO SERVICES */}
-      <section>
+      {/* <section>
         <h2 id="services">Services</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem
@@ -28,9 +30,9 @@ const LeftSideWrapper = () => {
           dignissimos quo facere eveniet perspiciatis veritatis unde excepturi,
           eaque dolorem provident. Sed, veritatis!
         </p>
-      </section>
+      </section> */}
       {/* //TODO RATES */}
-      <section>
+      {/* <section>
         <h2 id="rates">Rates</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione rem
@@ -50,7 +52,7 @@ const LeftSideWrapper = () => {
           dignissimos quo facere eveniet perspiciatis veritatis unde excepturi,
           eaque dolorem provident. Sed, veritatis!
         </p>
-      </section>
+      </section> */}
       {/* //*CONTACT */}
       <ContactSection id="contact">
         <ContactForm />
