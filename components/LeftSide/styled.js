@@ -21,6 +21,10 @@ export const Section = styled.section`
   p {
     padding-right: 30px;
   }
+  a {
+    color: #000;
+    padding-left: 4px;
+  }
 `;
 
 export const ImageWrapper = styled.div`

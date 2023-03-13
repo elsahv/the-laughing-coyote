@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  margin: 50px 0 70px;
+  // margin: 50px 0 70px;
+  &:hover {
+    transform: rotate(2deg);
+    transition: 1s;
+    // opacity: 0.7;
+  }
 `;
 
 export const PostTitle = styled.h2`

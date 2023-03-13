@@ -10,10 +10,6 @@ export default function Card({ post }) {
         <Link href={`post/${post.slug.current}`}>
           <Image src={urlFor(post.image)} alt="" />
         </Link>
-        <PostDescription>{post.description}</PostDescription>
-        <Button>
-          <Link href={`post/${post.slug.current}`}>Read more</Link>
-        </Button>
       </Wrapper>
     </>
   );

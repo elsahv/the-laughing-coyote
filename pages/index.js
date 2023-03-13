@@ -42,16 +42,18 @@ const RightSideWrapper = styled.div`
 `;
 
 const Tagline = styled.h2`
-  font-size: 28px;
+  text-decoration: underline;
+  font-size: 40px;
   margin: 50px 20px 0 30px;
   padding: 50px 30px;
   // background: pink;
 `;
 
 const BlogPostsGrid = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 100px 0 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em 4em;
+  margin: 50px 100px 0 50px;
   // background: pink;
 
   @media only screen and (max-width: 1024px) {
@@ -82,8 +84,9 @@ const Home = ({ posts }) => {
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
             <Tagline>
-              Software dev and web design/ sources for small business owners...
-              Scroll down for most recent posts.
+              {/* Software dev and web design/ sources for small business owners... */}
+              {/* Scroll down for most recent posts. */}
+              Latest Posts
             </Tagline>
 
             <BlogPostsGrid>

@@ -9,8 +9,8 @@ const HeaderSection = () => {
       </Logo>
       <NavLinks>
         <Link href="/#about">About</Link>
-        {/* <Link href="/#services">Services</Link>
-        <Link href="/#rates">Rates</Link> */}
+        <Link href="/#services">Services</Link>
+        {/* <Link href="/#rates">Website Packages</Link> */}
         <Link href="/#contact">Contact</Link>
       </NavLinks>
     </Header>
