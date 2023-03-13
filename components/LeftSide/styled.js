@@ -33,14 +33,10 @@ export const ImageWrapper = styled.div`
   grid-area: left;
   border: solid 2px #000;
   margin-left: 15px;
-  margin-top: 15px;
 
   @media only screen and (max-width: 1024px) {
     width: 210px;
     margin-right: 20px;
-  }
-  @media only screen and (max-width: 834px) {
-    // width: 200px;
   }
 `;
 

@@ -21,36 +21,29 @@ export default function PkgRate({
 }) {
   return (
     <Wrapper>
-      <Container>
-        {/* <Title>What type of Project can I help you with?</Title> */}
-        {/* <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa odit
-          consequatur saepe laudantium commodi reic.
-        </Description> */}
-      </Container>
-      <Container>
-        {content.map((item, index) => (
-          <div key={index}>
-            <ServiceTitle>{item.title}</ServiceTitle>
-            <ImgWrapper>
-              <Image
-                src={item.image}
-                alt="about-me"
-                layout="responsive"
-                className="img"
-              />
-            </ImgWrapper>
-            <Ul>
-              <li>{item.price}</li>
-              <li>{item.listItem1}</li>
-              <li>{item.listItem2}</li>
-              <li>{item.listItem3}</li>
-              <li>{item.listItem4}</li>
-              <li>{item.listItem5}</li>
-            </Ul>
-          </div>
-        ))}
-      </Container>
+      {/* <Container> */}
+      {content.map((item, index) => (
+        <div key={index}>
+          <ServiceTitle>{item.title}</ServiceTitle>
+          <ImgWrapper>
+            <Image
+              src={item.image}
+              alt="about-me"
+              layout="responsive"
+              className="img"
+            />
+          </ImgWrapper>
+          <Ul>
+            <li>{item.price}</li>
+            <li>{item.listItem1}</li>
+            <li>{item.listItem2}</li>
+            <li>{item.listItem3}</li>
+            <li>{item.listItem4}</li>
+            <li>{item.listItem5}</li>
+          </Ul>
+        </div>
+      ))}
+      {/* </Container> */}
     </Wrapper>
   );
 }

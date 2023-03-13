@@ -12,6 +12,7 @@ const content = [
     listItem3: "About Component",
     listItem4: "Contact Component",
     listItem5: "Design and Hosting Assistance/ Education",
+    
   },
   {
     id: 2,
@@ -23,6 +24,7 @@ const content = [
     listItem3: "Contact Component",
     listItem4: "Single Post Slug",
     listItem5: "Design and Hosting Assistance/ Education",
+    //use gomez
   },
 ];
 
