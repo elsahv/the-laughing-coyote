@@ -3,15 +3,10 @@ import styled from "styled-components";
 export const Header = styled.header`
   padding-left: 20px;
   padding-top 40px;
-  #blog {
-    color: blue;
-  }
 `;
 
 export const Logo = styled.h1`
   font-size: 80px;
-  // display: block;
-  // padding: 70px 0 35px 25px;
   width: 80%;
   // background: green;
 
@@ -22,12 +17,7 @@ export const Logo = styled.h1`
   }
 
   @media only screen and (max-width: 1024px) {
-    font-size: 45px;
-  }
-
-  @media only screen and (max-width: 834px) {
-    font-size: 37px;
-    padding: 60px 10px 20px 10px;
+    font-size: 55px;
   }
 `;
 
@@ -35,8 +25,6 @@ export const NavLinks = styled.li`
   margin-bottom: 350px;
   margin-right: 55px;
   margin-top: 20px;
-
-  // margin-left: 20px;
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
@@ -45,6 +33,10 @@ export const NavLinks = styled.li`
   font-size: 25px;
   border-top: solid 2px #333232;
   border-bottom: solid 2px #333232;
+
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 0px;
+  }
 
   a {
     margin: 1px 0;

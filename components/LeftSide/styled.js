@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  // background: teal;
   overflow-y: scroll;
   height: 100vh;
   width: 45%;
@@ -18,25 +17,15 @@ export const Wrapper = styled.div`
 `;
 
 export const Section = styled.section`
+  padding: 70px 20px;
+  margin-top: 100px;
+  // background: pink;
   p {
     padding-right: 30px;
   }
   a {
     color: #000;
     padding-left: 4px;
-  }
-`;
-
-export const ImageWrapper = styled.div`
-  position: relative;
-  width: 300px;
-  grid-area: left;
-  border: solid 2px #000;
-  margin-left: 15px;
-
-  @media only screen and (max-width: 1024px) {
-    width: 210px;
-    margin-right: 20px;
   }
 `;
 

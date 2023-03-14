@@ -2,12 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   // background: lightgray;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
-
-// export const Container = styled.div`
-//   padding-top: 200px;
-// `;
 
 export const Title = styled.h2`
   font-size: 40px;
@@ -18,7 +14,6 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.p`
-  font-size: 20px;
   margin: 10px 0;
 `;
 
@@ -31,12 +26,13 @@ export const Ul = styled.ul`
   padding-bottom: 50px;
   padding-top: 10px;
   padding-left: 30px;
-  font-size: 20px;
+  margin-bottom: 50px;
+  font-size: 18px;
 `;
 
 export const ServiceTitle = styled.h3`
-  font-size: 30px;
-  padding-top: 55px;
+  font-size: 25px;
+  // padding-top: 55px;
   padding-bottom: 3px;
   @media only screen and (max-width: 531px) {
     font-size: 17px;y

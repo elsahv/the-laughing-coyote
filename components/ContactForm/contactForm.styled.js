@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Form = styled.form`
-  // background: green;
   padding-left: 5px;
   padding-bottom: 20px;
   display: flex;
@@ -16,7 +15,6 @@ export const Form = styled.form`
   .input-fields {
     color: #000;
     border: solid 2px #000;
-
     padding-left: 10px;
     padding-top: 5px;
     font-size: 18px;
@@ -35,7 +33,6 @@ export const Form = styled.form`
     font-size: 17px;
     cursor: pointer;
     text-shadow: 1px 1px 1px gray;
-
     &:hover {
       transition: 1s;
       color: maroon;
@@ -79,6 +76,9 @@ export const Textarea = styled.textarea`
   height: 170px;
   border-radius: 5px;
   width: 500px;
+  @media only screen and (max-width: 1024px) {
+    width: 330px;
+  }
 `;
 
 export const SuccessMessageStyles = styled.div`

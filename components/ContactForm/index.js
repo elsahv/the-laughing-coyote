@@ -62,9 +62,8 @@ const ContactForm = () => {
   return (
     <Wrapper>
       <Form ref={form} onSubmit={handleSubmit}>
-        {/* <h2>Contact</h2> */}
         <div style={{ paddingRight: "35px" }}>
-          <h2> What do you think of this site so far?</h2>
+          <h2>Contact</h2>
           <p>{"I'd"} love to hear your feedback!</p>
           <p>
             If you are hiring any web developers, {"I'd"} really love to hear

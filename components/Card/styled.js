@@ -9,34 +9,18 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const PostTitle = styled.h2`
-  // background: pink;
-  // margin-top: 150px;
+export const PostTitle = styled.h3`
   padding: 10px 5px;
-  text-transform: capitalize;
 `;
 
 export const Image = styled.img`
   border: solid 1px #000;
   width: 100%;
-  // height: 550px;
   cursor: pointer;
   &:hover {
     // transform: rotate(2deg);
     transition: 1s;
     opacity: 0.7;
-  }
-  @media only screen and (max-width: 1024px) {
-    width: 450px;
-    height: 290px;
-  }
-  @media only screen and (max-width: 834px) {
-    width: 390px;
-    height: 250px;
-  }
-
-  @media only screen and (max-width: 400px) {
-    width: 340px;
   }
 `;
 

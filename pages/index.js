@@ -41,27 +41,28 @@ const RightSideWrapper = styled.div`
   }
 `;
 
-const Tagline = styled.h2`
+const PageTitle = styled.h2`
   text-decoration: underline;
-  font-size: 40px;
   margin: 50px 20px 0 30px;
   padding: 50px 30px;
   // background: pink;
+  @media only screen and (max-width: 1024px) {
+    margin: 20px 0 20px 0;
+    padding: 40px 0px 20px 20px;
+  }
 `;
 
 const BlogPostsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2em 4em;
-  margin: 50px 100px 0 50px;
+  margin: 50px 100px 50px 50px;
   // background: pink;
 
   @media only screen and (max-width: 1024px) {
-    margin: 0 0 0 30px;
-  }
-
-  @media only screen and (max-width: 800px) {
-    margin: 10px;
+    // grid-template-columns: 1fr;
+    margin: 0 20px 50px;
+    grid-gap: 1em 2em;
   }
 `;
 
@@ -83,11 +84,7 @@ const Home = ({ posts }) => {
             <LeftSide />
           </LeftSideWrapper>
           <RightSideWrapper id="blog">
-            <Tagline>
-              {/* Software dev and web design/ sources for small business owners... */}
-              {/* Scroll down for most recent posts. */}
-              Latest Posts
-            </Tagline>
+            <PageTitle>Latest Posts</PageTitle>
 
             <BlogPostsGrid>
               {posts &&
