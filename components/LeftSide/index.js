@@ -9,14 +9,14 @@ const LeftSideWrapper = () => {
     <Wrapper>
       <Header />
 
-      {/* //*SERVICES */}
-      <Section id="services">
-        <PkgRate />
-      </Section>
-
       {/* //*ABOUT */}
       <Section id="about">
         <About />
+      </Section>
+
+      {/* //*SERVICES */}
+      <Section id="services">
+        <PkgRate />
       </Section>
 
       {/* //*CONTACT */}
